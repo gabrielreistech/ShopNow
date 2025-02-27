@@ -1,4 +1,5 @@
 import styles from "./Header.module.css"
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -6,19 +7,20 @@ const Header = () => {
          <div className={styles.container}>
 
             <div className={styles.title}>
-                <h1>SHOPNOW</h1>
+                <h1><Link>SHOPNOW</Link></h1>
             </div>
 
             <div className={styles.search}>
                 <label htmlFor="text"></label>
-                <input type="text" placeholder="Pesquise aqui" />
+                <input id="text" type="text" placeholder="Pesquise aqui" />
             </div>
             
             <div className={styles.list}>
                 <ul>
-                  <li>Todos os produtos</li>
-                  <li>Sobre nós</li>
-                  <li className={styles.login_li}>Login</li>
+                  <li><Link to="/">Home</Link></li> 
+                  <li>Todos as categorias</li>
+                  <li><Link to="/sobre">Sobre</Link></li>
+                  <li  className={styles.login}><Link to="/login">Login</Link></li>
                 </ul>
             </div>
             

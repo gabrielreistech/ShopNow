@@ -23,6 +23,7 @@
 }
 
 .content p{
+   background-color: rgba(128, 128, 128, 0.399); 
    width: 100%; 
    font-family: Arial, Helvetica, sans-serif;
    padding: 0.8rem; 
@@ -30,7 +31,9 @@
 }
 
 .buttons{
-    margin: 0 0 0 4.1rem;
+    background-color: rgba(128, 128, 128, 0.399);
+    height: 15vh;
+    border-radius: 0 0 2rem 2rem ;
     display: flex;
     flex-direction: column;
 }
@@ -38,7 +41,7 @@
 .buttons button{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
-    margin-top: 0.8rem;
+    margin: 0.8rem 0 0 4.1rem;
     border: none;
     border-radius: 1rem;
     width: 13vw;
