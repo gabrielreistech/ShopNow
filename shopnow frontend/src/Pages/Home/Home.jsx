@@ -1,7 +1,8 @@
 import Header from "../../Components/Header/Header"
 import Footer from "../../Components/Footer/Footer"
-import Card from "../../Components/Card/Card";
+import Sessao from "../../Components/sessao/sessao";
 import MainLayout from "../../Components/MainLayout/MainLayout";
+import Banner from "../../Components/Banner/Banner";
 
 const Home = () => {
      
@@ -9,12 +10,8 @@ const Home = () => {
         <>
         <Header />
         <MainLayout>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+          <Banner />
+          <Sessao />
         </MainLayout>
         <Footer />
         </>
