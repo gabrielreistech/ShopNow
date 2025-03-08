@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Sessao.module.css"
 
 const Sessao = () => {
@@ -5,27 +6,35 @@ const Sessao = () => {
        <section className={styles.container}>
 
           <div className={styles.sections}>
+           <Link to="/login">
             <p>Entre na sua conta</p>
             <img src="../../../public/conta.png" alt="#" />
             <p>Aproveite ofertas para <br /> comprar tudo que quiser.</p>
+            </Link>
           </div>
 
           <div className={styles.sections}>
+            <Link>
             <p>Meios de Pagamentos</p>
             <img src="../../../public/moeda-de-dolar (3).png" alt="#" />
             <p>Pague suas compras com<br /> rapidez e segurança.</p>
+            </Link>
           </div>
 
           <div className={styles.sections}>
+            <Link>
             <p>Menos de R$100</p>
             <img src="../../../public/preco-baixo.png" alt="#" />
             <p>Confira produtos<br /> com preços baixos.</p>
+            </Link>
           </div>
 
           <div className={styles.sections}>
-            <p>Nossas categorias</p>
+            <Link>
+            <p>Sobre nós</p>
             <img src="../../../public/quadrado.png" alt="#" />
-            <p>Encontre vários produtos<br /> e muito mais.</p>
+            <p>Conheça quem nós somos <br /> e os nossos propósitos.</p>
+            </Link>
           </div>
        </section>
     );

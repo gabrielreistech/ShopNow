@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    background-color: rgb(209, 209, 209);
+}
+
+.image img{
+   width: 50vw;
+   height: 90vh;
+}
+
+.text{
+    margin-top: 0.34rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: black;
+    font-weight: bolder;
+    height: 87vh;
+    width: 49.977vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text p{
+    padding-bottom: 2rem;
+    width: 45vw;
+    font-size: 1.5rem;
+}
