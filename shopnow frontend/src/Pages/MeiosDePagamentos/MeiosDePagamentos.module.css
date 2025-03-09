@@ -1,0 +1,48 @@
+.containerExterno{
+    background: rgb(237, 154, 13);
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0 0 0;
+    height: 90vh;
+}
+
+.containerInterno{
+   background-color: rgb(209, 209, 209);
+   width: 25vw;
+   height: 75vh; 
+   border: 3px solid black;
+   border-radius: 3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.title{
+    width: 25vw;
+    text-align: center;
+    border-bottom: 3px solid black;
+    padding-bottom: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.cards{
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    width: 20vw;;
+}
+
+.cards p{
+    padding: 0 0 0 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cards img{
+    margin-left: 5rem;
+    width: 4vw;
+    height: 8vh;
+}
