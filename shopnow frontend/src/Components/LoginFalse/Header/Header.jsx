@@ -1,7 +1,13 @@
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
+import img from "./carrinho-de-compras-de-design-xadrez.png";
+import { useContext } from "react";
+import { CarrinhoDeComprasContext } from "../../../Contexts/CarrinhoDeComprasContext";
 
 const Header = () => {
+
+  const {quantidade} = useContext(CarrinhoDeComprasContext);
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -9,7 +15,10 @@ const Header = () => {
           <Link to="/">SHOPNOW</Link>
         </h1>
       </div>
-
+      <div className={styles.carrinhoDeCompras}>
+         <img src={img} alt="ícone do carrinho de compras." />
+         <p>{quantidade}</p>
+      </div>
       <div className={styles.search}>
         <label htmlFor="text"></label>
         <input id="text" type="text" placeholder="Pesquise aqui" />

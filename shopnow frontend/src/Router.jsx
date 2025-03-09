@@ -8,10 +8,12 @@ import Eletronicos from "./Pages/Eletronicos/Eletronicos";
 import ModaEAcessorios from "./Pages/ModaEAcessorios/ModaEAcessorios";
 import CasaEDecoracao from "./Pages/CasaEDecoracao/CasaEDecoracao";
 import Brinquedos from "./Pages/Brinquedos/Brinquedos";
+import { CarrinhoDeComprasProvider } from "./Contexts/CarrinhoDeComprasContext";
 
 const Router = () => {
 
     return(
+        <CarrinhoDeComprasProvider>
         <BrowserRouter>
            <Routes>
                <Route path="/" element={<Home />} />
@@ -27,6 +29,7 @@ const Router = () => {
                <Route path="/brinquedos" element={<Brinquedos />} />
            </Routes>
         </BrowserRouter>
+        </CarrinhoDeComprasProvider>
     );
 }
 

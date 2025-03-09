@@ -1,4 +1,6 @@
 .display{
     display: flex;
     flex-wrap: wrap;
+    background: rgb(230, 150, 11);
+    height: 87.6vh;
 }
