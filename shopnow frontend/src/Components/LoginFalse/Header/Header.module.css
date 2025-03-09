@@ -19,8 +19,30 @@
     color: black;
 }
 
+.carrinhoDeCompras{
+    cursor: pointer;
+    display: flex;
+    width: 10rem;
+    padding: 1rem 0 0 5rem;
+}
+
+.carrinhoDeCompras img{
+   width: 2vw;
+   height: 4.4vh;
+}
+
+.carrinhoDeCompras p{
+   height: 3vh; 
+   font-size: 1.3rem;
+   font-weight: bold;
+   border-radius: 0.5rem; 
+   padding: 0.1rem 0.3rem 0 0.32rem;
+   margin: 0.8rem 0 0 0;
+   background-color: white;
+}
+
 .search{
-   padding: 1.2rem 0rem 0rem 12rem;
+   padding: 1.2rem 0rem 0rem 4rem;
 }
 
 .search input{
