@@ -1,8 +1,8 @@
-import Header from "../../Components/Header/Header"
-import Footer from "../../Components/Footer/Footer"
-import Sessao from "../../Components/sessao/sessao";
-import MainLayout from "../../Components/MainLayout/MainLayout";
-import Banner from "../../Components/Banner/Banner";
+import Header from "../../Components/LoginFalse/Header/Header"
+import MainLayout from "../../Components/LoginFalse/MainLayout/MainLayout";
+import Banner from "../../Components/LoginFalse/Banner/Banner";
+import Sessao from "../../Components/LoginFalse/Sessao/Sessao";
+import Footer from "../../Components/LoginFalse/Footer/Footer";
 
 const Home = () => {
      

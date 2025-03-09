@@ -1,0 +1,9 @@
+.container{
+    background: rgb(200, 132, 15);
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 5vh;
+    text-align: center;
+    padding: 0.6rem 0rem 0rem 0rem;
+}

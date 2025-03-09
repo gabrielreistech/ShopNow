@@ -1,8 +1,8 @@
-import styles from "./Sobre.module.css"
-import Header from "../../Components/Header/Header"
-import MainLayout from "../../Components/MainLayout/MainLayout"
-import Footer from "../../Components/Footer/Footer"
-import img from "./shopping-2163323_1920.jpg"
+import Header from "../../Components/LoginFalse/Header/Header"
+import MainLayout from "../../Components/LoginFalse/MainLayout/MainLayout";
+import Footer from "../../Components/LoginFalse/Footer/Footer";
+import img from "./shopping-2163323_1920.jpg";
+import styles from "./Sobre.module.css";
 
 const Sobre = () => {
     return(

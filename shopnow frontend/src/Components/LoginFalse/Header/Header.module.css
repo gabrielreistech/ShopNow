@@ -1,0 +1,106 @@
+.container{
+    display: flex;
+    background: rgb(200, 132, 15);
+    height: 8vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.title h1{
+   cursor: pointer;
+   font-size: 2.8rem;
+   padding: 0.7rem 0 0 5rem;
+}
+
+.title h1 a{
+    text-decoration: none;
+    color: black;
+}
+
+.search{
+   padding: 1.2rem 0rem 0rem 12rem;
+}
+
+.search input{
+    width: 31vw;
+    height: 4vh;
+    border-radius: 3rem;
+    border: 0;
+    padding: 0.1rem 0rem 0rem 0.8rem;
+    font-size: 1.2rem;
+}
+
+.list ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.list ul li{
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.26rem;
+    padding: 1.5rem 0 0 5rem;
+    font-weight: bolder;
+}
+
+.list ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.list .login a{
+    color: white;
+    text-shadow:
+    1px 1px 0px black, 
+    -1px -1px 0px black,  
+    1px -1px 0px black, 
+    -1px 1px 0px black;
+}
+
+.column{
+    z-index: 999;
+    position: absolute;
+    right: 21.9rem;
+    top: 4.45rem;
+    
+}
+
+.column ul{
+    display: none;
+    flex-direction: column;
+}
+
+.column ul li{
+    border: 1px solid black;
+    height: 4.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: rgb(237, 154, 13);
+    font-size: 1.26rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.category{
+    height: 4.5rem;
+}
+
+.category:hover .column ul{
+    display: flex;
+    z-index: 999;
+}
+
+.column:hover .column ul{
+    display: flex;
+}
+
+.column ul li:hover{
+    background-color: rgb(209, 209, 209);
+}
+
+
