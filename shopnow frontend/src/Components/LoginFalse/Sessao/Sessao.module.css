@@ -1,5 +1,6 @@
 .container{
-    height: 37.9vh;
+    height: 53vh;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -7,7 +8,7 @@
 }
 
 .sections{
-    padding-bottom: 2rem;
+    border-radius: 1rem;
 }
 
 .sections a{
@@ -17,10 +18,13 @@
     align-items: center;
     border: 1px solid black;
     border-radius: 2rem;
+    box-shadow: 0px 0px 5px 0px black,
+                0px 0px 5px 0px  black,
+                0px 0px 5px 0px black,
+                0px 0px 5px 0px black;
     background-color: rgb(209, 209, 209);
     padding: 0.5rem 0 0.5rem 0;
     width: 15vw;
-    box-shadow: 0px 3px 20px 4px black;
     color: black;
     cursor: pointer;
 }

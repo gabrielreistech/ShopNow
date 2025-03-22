@@ -1,6 +1,7 @@
 .display{
+    margin-top: 3.3rem;
     display: flex;
     flex-wrap: wrap;
     background: rgb(230, 150, 11);
-    height: 87.6vh;
+    height: 100vh;
 }

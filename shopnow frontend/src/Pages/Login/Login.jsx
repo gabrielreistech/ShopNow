@@ -1,17 +1,17 @@
 import Header from "../../Components/LoginFalse/Header/Header"
-import MainLayout from "../../Components/LoginFalse/MainLayout/MainLayout";
 import LoginComponent from "../../Components/LoginFalse/LoginComponent/LoginComponent"
 import Footer from "../../Components/LoginFalse/Footer/Footer";
+import MainContent from "../../Components/LoginFalse/MainContent/MainContent";
 
 const Login = () => {
-    return(
-        <>
-          <Header />
-          <MainLayout>
-             <LoginComponent />
-          </MainLayout>
-          <Footer />
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <MainContent>
+        <LoginComponent />
+      </MainContent>
+      <Footer />
+    </>
+  );
 }
 export default Login;

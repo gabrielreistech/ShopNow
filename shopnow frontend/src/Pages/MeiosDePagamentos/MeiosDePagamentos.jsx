@@ -1,5 +1,4 @@
 import Header from "../../Components/LoginFalse/Header/Header"
-import MainLayout from "../../Components/LoginFalse/MainLayout/MainLayout";
 import Footer from "../../Components/LoginFalse/Footer/Footer";
 import imgFatura from "./fatura.png";
 import imgPix from "./logo-pix-520x520.png";
@@ -11,7 +10,6 @@ const MeiosDePagamentos = () =>{
     return(
        <div>
           <Header />
-          <MainLayout>
             <div className={styles.containerExterno}>
                 <div className={styles.containerInterno}>
                     <div className={styles.title}>
@@ -35,7 +33,6 @@ const MeiosDePagamentos = () =>{
                     </div>
                 </div>
             </div>
-          </MainLayout>
           <Footer />
        </div>
     );

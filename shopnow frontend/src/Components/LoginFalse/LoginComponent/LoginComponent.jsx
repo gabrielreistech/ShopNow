@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 import styles from "./LoginComponent.module.css"
+import { useForm } from "react-hook-form";
 
 const LoginComponent = () => {
+
+    const { register, handleSubmit, formState: {errors} } = useForm();
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+    }
 
     return (
         <div className={styles.container}>
             <div className={styles.form}>
 
-                <form action="submit">
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <div className={styles.title}>
                         <h1>Faça o seu Login</h1>
                     </div>
@@ -31,7 +38,7 @@ const LoginComponent = () => {
                         <button>Entrar</button>
                     </div>
                     <div className={styles.cadastro}>
-                        <p>Ainda não tem conta? <Link to="/cadastro">Cadastre-se</Link></p>
+                        <p>Ainda não tem conta? <Link to="/proximaversao">Cadastre-se</Link></p>
                     </div>
                 </form>
             </div>

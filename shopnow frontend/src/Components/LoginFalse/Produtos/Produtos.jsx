@@ -1,10 +1,13 @@
 import { useContext, useState } from "react";
 import styles from "./Produtos.module.css";
 import { CarrinhoDeComprasContext } from "../../../Contexts/CarrinhoDeComprasContext";
+import { ProductsContext } from "../ProductsContext/ProductsContext";
 
-const Produtos = ( props ) => {
+const Produtos = ( {produto} ) => {
  
     const { adicionarItem, removerItem} = useContext(CarrinhoDeComprasContext);
+    
+    const { aumentarQuantidade, diminuirQuantidade } = useContext(ProductsContext);
 
     const [quantidade, setQuantidade] = useState(0);
 
@@ -12,19 +15,19 @@ const Produtos = ( props ) => {
        <div className={styles.container}>
           <div className={styles.containerInterno}>
             <div className={styles.nomeDoProduto}>
-                <p>{props.nome}</p>
+                <p>{produto.nome}</p>
             </div>
             <div>
                 <img src="https://img.freepik.com/vetores-gratis/ilustracao-do-conceito-de-computador-desktop-moderno_114360-11616.jpg" alt="Foto do produto" />
             </div>
             <div className={styles.preco}>
-                <p>R${props.preco}</p>
+                <p>R${produto.preco}</p>
             </div>
             <div className={styles.carrinho}>
                 <p>Adicionar ao Carrinho</p>
-                <p className={styles.quantidadeDoCarrinho}>{quantidade}</p>
-                <button onClick={() => {adicionarItem(); setQuantidade(prevQuantidade => prevQuantidade +1)}}>+</button>
-                <button onClick={() => {if(quantidade !== 0){removerItem(); setQuantidade(prevQuantidade => prevQuantidade - 1)}}}>-</button>
+                <p className={styles.quantidadeDoCarrinho}>{produto.quantidadeNoCarrinho}</p>
+                <button onClick={() => {adicionarItem(); aumentarQuantidade(produto.id) }}>+</button>
+                <button onClick={() => {if(produto.quantidadeNoCarrinho !== 0) { removerItem(), diminuirQuantidade(produto.id)}}}>-</button>
             </div>
           </div>
        </div>

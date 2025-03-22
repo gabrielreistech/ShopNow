@@ -3,13 +3,12 @@
 }
 
 .containerInterno{
-    margin: 1.5rem 3rem 0 3rem;
+    margin: 2rem 2rem 0rem 3.3rem;
     background-color: rgb(209, 209, 209);
     width: 20vw;
     height: 40vh;
     border: 2px solid black;
     border-radius: 2rem;
-    padding: 0 0 0 0;
 }
 
 .containerInterno p{
@@ -18,7 +17,7 @@
 }
 
 .containerInterno img{
-    width: 19.8vw;
+    width: 19.75vw;
     height: 20vh;
 }
 

@@ -22,8 +22,8 @@ const Sessao = () => {
           </div>
 
           <div className={styles.sections}>
-            <Link>
-            <p>Menos de R$100</p>
+            <Link to="/produtosabaixode100">
+            <p>Abaixo de R$100</p>
             <img src="/preco-baixo.png" alt="#" />
             <p>Confira produtos<br /> com preços baixos.</p>
             </Link>

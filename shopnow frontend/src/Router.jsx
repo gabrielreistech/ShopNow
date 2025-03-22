@@ -9,10 +9,15 @@ import ModaEAcessorios from "./Pages/ModaEAcessorios/ModaEAcessorios";
 import CasaEDecoracao from "./Pages/CasaEDecoracao/CasaEDecoracao";
 import Brinquedos from "./Pages/Brinquedos/Brinquedos";
 import { CarrinhoDeComprasProvider } from "./Contexts/CarrinhoDeComprasContext";
+import { ProductsProvider } from "./Components/LoginFalse/ProductsContext/ProductsContext";
+import AbaixoDe100 from "./Pages/AbaixoDe100/AbaixoDe100";
+import ProximaVersao from "./Pages/ProximaVersao/ProximaVersao";
 
 const Router = () => {
 
     return(
+
+        <ProductsProvider>
         <CarrinhoDeComprasProvider>
         <BrowserRouter>
            <Routes>
@@ -21,7 +26,9 @@ const Router = () => {
                <Route path="/sobre" element={<Sobre />} />
                <Route path="/login" element={<Login />} />
                <Route path="/cadastro" element={<Cadastro />}/>
+               <Route path="/proximaversao" element={<ProximaVersao />} />
                <Route path="/meiosdepagamentos" element={<MeiosDePagamentos />} />
+               <Route path="/produtosabaixode100" element={<AbaixoDe100 />} />
 
                <Route path="/eletronicos" element={<Eletronicos />} />
                <Route path="//modaeacessorios" element={<ModaEAcessorios />} />
@@ -30,6 +37,7 @@ const Router = () => {
            </Routes>
         </BrowserRouter>
         </CarrinhoDeComprasProvider>
+        </ProductsProvider>
     );
 }
 
