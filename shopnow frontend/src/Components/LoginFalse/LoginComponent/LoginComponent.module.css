@@ -13,6 +13,7 @@
     align-items: center;
     width: 30vw;
     height: 70vh;
+    margin-top: -4rem;
     background: rgba(200, 132, 15, 0.8);
     border-radius: 2rem;
 }

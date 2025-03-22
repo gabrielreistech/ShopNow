@@ -1,27 +1,29 @@
 import styles from "./CasaEDecoracao.module.css";
 import Header from "../../Components/LoginFalse/Header/Header"
-import MainLayout from "../../Components/LoginFalse/MainLayout/MainLayout";
 import Footer from "../../Components/LoginFalse/Footer/Footer";
-import Produtos from "../../Components/LoginFalse/Produtos/Produtos"
+import { ProductsContext } from "../../Components/LoginFalse/ProductsContext/ProductsContext";
+import { useContext, useEffect } from "react";
+import Produtos from "../../Components/LoginFalse/Produtos/Produtos";
+import MainContent from "../../Components/LoginFalse/MainContent/MainContent";
 
 const CasaEDecoracao = () => {
+
+   const {produtosFiltrados, filtrarPorCategoria} = useContext(ProductsContext);
+
+   useEffect(() =>{
+      filtrarPorCategoria("Casa e Decoração");
+   })
+
    return (
       <div>
-         <Header />
-         <MainLayout>
-            <div className={styles.display}>
-               <Produtos />
-               <Produtos />
-               <Produtos />
-               <Produtos />
-               <Produtos />
-               <Produtos />
-               <Produtos />
-               <Produtos />
-            </div>
-         </MainLayout>
-         <Footer />
-      </div>
+      <Header />
+      <MainContent>
+        <div className={styles.display}>
+          {produtosFiltrados.map((produto, index) => <Produtos key={index} produto={produto} />)}
+        </div>
+      </MainContent>
+      <Footer />
+    </div>
    );
 }
 

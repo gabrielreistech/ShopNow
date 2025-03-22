@@ -1,25 +1,27 @@
 import styles from "./Brinquedos.module.css";
 import Header from "../../Components/LoginFalse/Header/Header"
-import MainLayout from "../../Components/LoginFalse/MainLayout/MainLayout";
 import Footer from "../../Components/LoginFalse/Footer/Footer";
+import { useContext, useEffect } from "react";
+import { ProductsContext } from "../../Components/LoginFalse/ProductsContext/ProductsContext";
 import Produtos from "../../Components/LoginFalse/Produtos/Produtos";
+import MainContent from "../../Components/LoginFalse/MainContent/MainContent";
 
 const Brinquedos = () => {
+
+  const { produtosFiltrados, filtrarPorCategoria } = useContext(ProductsContext);
+
+  useEffect(() => {
+    filtrarPorCategoria("Brinquedos")
+  }, [filtrarPorCategoria])
+
   return (
     <div>
       <Header />
-      <MainLayout>
+      <MainContent>
         <div className={styles.display}>
-          <Produtos />
-          <Produtos />
-          <Produtos />
-          <Produtos />
-          <Produtos />
-          <Produtos />
-          <Produtos />
-          <Produtos />
+          {produtosFiltrados.map((produto, index) => <Produtos key={index} produto={produto} />)}
         </div>
-      </MainLayout>
+      </MainContent>
       <Footer />
     </div>
   );
