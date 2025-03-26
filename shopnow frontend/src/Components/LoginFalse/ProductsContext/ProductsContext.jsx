@@ -4,7 +4,7 @@ export const ProductsContext = createContext();
 
 export const ProductsProvider = ({children}) => {
 
-    const [produtos] = useState([
+    const [produtos, setProdutos] = useState([
       {id: 1, nome: "Sofá 3 Lugares", preco: 1500, categoria: "Casa e Decoração", quantidadeNoCarrinho: 0 },
       {id: 2, nome: "Abajur de Mesa", preco: 120, categoria: "Casa e Decoração" , quantidadeNoCarrinho: 0 },
       {id: 3, nome: "Cortina Blackout", preco: 250, categoria: "Casa e Decoração" , quantidadeNoCarrinho: 0 },
@@ -43,11 +43,13 @@ export const ProductsProvider = ({children}) => {
       ]);
 
       const aumentarQuantidade = (id) => {
-         produtos.map(produto => { if(id === produto.id) { produto.quantidadeNoCarrinho += 1}});
+         setProdutos( produto => 
+         produtos.map(produto => id === produto.id ? {...produto, quantidadeNoCarrinho: produto.quantidadeNoCarrinho + 1} : produto));
       } 
 
       const diminuirQuantidade = (id) => {
-         produtos.map(produto => { if(id === produto.id && produto.quantidadeNoCarrinho > 0) { produto.quantidadeNoCarrinho -= 1}});
+         setProdutos( produto => 
+         produtos.map(produto => id === produto.id ? {...produto, quantidadeNoCarrinho: produto.quantidadeNoCarrinho - 1} : produto));
       }
     
       const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
@@ -60,8 +62,10 @@ export const ProductsProvider = ({children}) => {
 
       const produtosAbaixoDe100Reais = produtos.filter(produto => produto.preco <= 100);
 
+      const produtosNosCarrinhos = produtos.filter(produto => produto.quantidadeNoCarrinho > 0);
+
       return(
-         <ProductsContext.Provider value={{produtosFiltrados, filtrarPorCategoria, produtosAbaixoDe100Reais, aumentarQuantidade, diminuirQuantidade}}>
+         <ProductsContext.Provider value={{produtosFiltrados, filtrarPorCategoria, produtosAbaixoDe100Reais, aumentarQuantidade, diminuirQuantidade, produtosNosCarrinhos}}>
             {children}
          </ProductsContext.Provider>
 

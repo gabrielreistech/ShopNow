@@ -9,8 +9,6 @@ const Produtos = ( {produto} ) => {
     
     const { aumentarQuantidade, diminuirQuantidade } = useContext(ProductsContext);
 
-    const [quantidade, setQuantidade] = useState(0);
-
     return(
        <div className={styles.container}>
           <div className={styles.containerInterno}>
