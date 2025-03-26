@@ -41,6 +41,37 @@
    background-color: white;
 }
 
+.tituloDoCarrinhoDeCompras{
+    background: rgb(200, 132, 15);
+    padding: 5px;
+    border-bottom: 2px solid black;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.produtosNosCarrinhos{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 1.2rem -34rem 0 -19.5rem;
+    min-height: 5vh;
+    max-height: 68vh;
+    width: 44.2vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.valorTotalDoCarrinho{
+    background: rgb(200, 132, 15);
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    padding: 1rem;
+    font-weight: bold;
+}
+
 .search{
    padding: 1.2rem 0rem 0rem 4rem;
 }

@@ -13,7 +13,6 @@
 }
 
 .text{
-    margin-top: 0.34rem;
     margin-left: 2.5rem;
     text-align: justify;
     color: black;
@@ -23,10 +22,16 @@
     font-size: 1.6rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    
     flex-direction: column;
 }
 
 .text p{
     margin-top: 1.5rem;
+}
+
+.span{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0 0.2rem 0 0.2rem;
 }

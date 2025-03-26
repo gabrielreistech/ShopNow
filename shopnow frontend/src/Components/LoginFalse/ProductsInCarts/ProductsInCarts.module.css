@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+    width: 44vw;
+    height: 15vh;
+    padding-top: 1rem;
+    background: rgb(230, 150, 11);
+    font-size: 1.4rem;
+}
+
+.nome{
+    margin: 0 0 0 1rem;
+    font-weight: bold;
+}
+
+.preco{
+    font-weight: bold;
+}
+
+.quantidadeNoCarrinho{
+    font-weight: bold;
+}
