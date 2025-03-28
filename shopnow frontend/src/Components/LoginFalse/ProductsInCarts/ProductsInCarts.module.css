@@ -4,22 +4,24 @@
     gap: 3rem;
     flex-direction: row;
     border-bottom: 2px solid black;
-    width: 44vw;
-    height: 15vh;
-    padding-top: 1rem;
-    background: rgb(230, 150, 11);
+    width: auto;
+    height: 12vh;
+    padding-top: 1.5rem;
+    background: rgb(200, 132, 15);
     font-size: 1.4rem;
 }
 
 .nome{
-    margin: 0 0 0 1rem;
+    margin: 1.2rem 0 0 1rem;
     font-weight: bold;
 }
 
 .preco{
+    margin: 1.2rem 0 0 0;
     font-weight: bold;
 }
 
 .quantidadeNoCarrinho{
+    margin: 1.2rem 0 0 0;
     font-weight: bold;
 }

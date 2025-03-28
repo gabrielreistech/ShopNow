@@ -1,14 +1,7 @@
-import { useContext, useState } from "react";
+import AdicionarERemoverDoCarrinho from "../AdicionarERemoverDoCarrinho/AdicionarERemoverDoCarrinho";
 import styles from "./Produtos.module.css";
-import { CarrinhoDeComprasContext } from "../../../Contexts/CarrinhoDeComprasContext";
-import { ProductsContext } from "../ProductsContext/ProductsContext";
 
 const Produtos = ( {produto} ) => {
- 
-    const { adicionarItem, removerItem} = useContext(CarrinhoDeComprasContext);
-    
-    const { aumentarQuantidade, diminuirQuantidade } = useContext(ProductsContext);
-
     return(
        <div className={styles.container}>
           <div className={styles.containerInterno}>
@@ -21,12 +14,12 @@ const Produtos = ( {produto} ) => {
             <div className={styles.preco}>
                 <p>R${produto.preco}</p>
             </div>
-            <div className={styles.carrinho}>
-                <p>Adicionar ao Carrinho</p>
-                <p className={styles.quantidadeDoCarrinho}>{produto.quantidadeNoCarrinho}</p>
-                <button onClick={() => {adicionarItem(); aumentarQuantidade(produto.id) }}>+</button>
-                <button onClick={() => {if(produto.quantidadeNoCarrinho !== 0) { removerItem(), diminuirQuantidade(produto.id)}}}>-</button>
+
+            <div className={styles.funcao}>
+                <p className={styles.funcaoP}>Quantidade no Carrinho: </p>
+                <p>{produto.quantidadeNoCarrinho}</p>
             </div>
+            <AdicionarERemoverDoCarrinho produto={produto} />
           </div>
        </div>
     );
