@@ -3,10 +3,10 @@
 }
 
 .containerInterno{
-    margin: 0.5rem 2rem 0rem 3.3rem;
+    margin: 1rem 2rem 0rem 3.3rem;
     background-color: rgb(209, 209, 209);
     width: 20vw;
-    height: 40vh;
+    height: 45vh;
     border: 2px solid black;
     border-radius: 2rem;
 }
@@ -32,31 +32,17 @@
    padding: 0.5rem 0 0 0;
 }
 
-.carrinho{
+.funcao{
+    margin: 1rem 0 0 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 8vh;
 }
 
-.carrinho p{
-   padding: 0 0 0 0.2rem;
-   margin:  0 0.4rem 0 0;
-   font-size: 1.5rem;
-   text-align: center;
-   font-weight: bold;
-}
-
-.carrinho .quantidadeDoCarrinho{
-    padding: 0 0.5rem 0 0.5rem;
-    background-color: white;
-    border-radius: 0.5rem;
-}
-
-.carrinho button{
-    margin: 0 0.2rem 0 0;
-    width: 2vw;
-    height: 3.32vh;
+.funcaoP{
     font-weight: bold;
-    font-size: 1.2rem;
+    padding: 0 0 0 2rem;
+}
+
+.funcao p{
+    font-weight: bold;
+    margin: 0 0 0 4px;
 }
