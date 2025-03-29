@@ -12,6 +12,7 @@ import { CarrinhoDeComprasProvider } from "./Contexts/CarrinhoDeComprasContext";
 import { ProductsProvider } from "./Components/LoginFalse/ProductsContext/ProductsContext";
 import AbaixoDe100 from "./Pages/AbaixoDe100/AbaixoDe100";
 import ProximaVersao from "./Pages/ProximaVersao/ProximaVersao";
+import TodosOsProdutos from "./Pages/TodosOsProdutos/TodosOsProdutos";
 
 const Router = () => {
 
@@ -29,6 +30,7 @@ const Router = () => {
                <Route path="/proximaversao" element={<ProximaVersao />} />
                <Route path="/meiosdepagamentos" element={<MeiosDePagamentos />} />
                <Route path="/produtosabaixode100" element={<AbaixoDe100 />} />
+               <Route path="/todososprodutos" element={<TodosOsProdutos />} />
 
                <Route path="/eletronicos" element={<Eletronicos />} />
                <Route path="//modaeacessorios" element={<ModaEAcessorios />} />

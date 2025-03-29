@@ -1,33 +1,59 @@
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img from "./carrinho-de-compras-de-design-xadrez.png";
-import { use, useContext, useEffect, useState } from "react";
+import { use, useContext, useEffect, useRef, useState } from "react";
 import { CarrinhoDeComprasContext } from "../../../Contexts/CarrinhoDeComprasContext";
 import { ProductsContext } from "../ProductsContext/ProductsContext";
 import ProductsInCarts from "../ProductsInCarts/ProductsInCarts";
 
-const Header = () => {
+const Header = ({ inputRef }) => {
+
+  const navigate = useNavigate();
 
   const { quantidade } = useContext(CarrinhoDeComprasContext);
 
-  const { produtosNosCarrinhos } = useContext(ProductsContext);
+  const { produtosNosCarrinhos, filtrarPorNome } = useContext(ProductsContext);
 
   const [contem, setContem] = useState(false);
 
   const [mouseEnter, setMouseEnter] = useState(false);
 
   const handleMouseEnter = () => {
-     setMouseEnter(true);
+    setMouseEnter(true);
   }
 
   const handleMouseLeave = () => {
-     setMouseEnter(false);
+    setMouseEnter(false);
   }
 
   useEffect(() => {
     const isProdutosNosCarrinhos = produtosNosCarrinhos.some((produto) => produto.quantidadeNoCarrinho > 0) && mouseEnter == true;
     setContem(isProdutosNosCarrinhos);
   }, [produtosNosCarrinhos, mouseEnter])
+
+  const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+     const savedValue = localStorage.getItem("searchValue");
+     if(savedValue){
+      setInputValue(savedValue);
+     }
+  }, [])
+
+  useEffect(() => {
+    filtrarPorNome(inputValue);
+  }, [inputValue])
+
+  const handleOnChange = (event) => {
+    const value = event.target.value;
+    setInputValue(value);
+
+    localStorage.setItem("searchValue", value);
+
+    if(value){
+      navigate("/todososprodutos");
+    }
+  }
 
   return (
     //Parte do código onde fica o nome da loja, o SHOPNOW.
@@ -46,7 +72,7 @@ const Header = () => {
 
         {/* Essa parte do código é onde fica a lista dos items que estão no carrinho de compras */}
         {contem && (
-         <div className={`${mouseEnter ? styles.produtosNosCarrinhosOnMouseEnter : styles.produtosNosCarrinhos}`}>
+          <div className={`${mouseEnter ? styles.produtosNosCarrinhosOnMouseEnter : styles.produtosNosCarrinhos}`}>
             <div className={styles.tituloDoCarrinhoDeCompras}>
               <p>Itens do carrinho de compras</p>
             </div>
@@ -59,12 +85,12 @@ const Header = () => {
               <p>Valor total do carrinho: R${produtosNosCarrinhos.reduce((soma, produto) => soma + (produto.preco * produto.quantidadeNoCarrinho), 0)}</p>
             </div>
           </div>
-         )}
+        )}
       </div>
       {/* Parte do código onde fica a barra de pesquisa */}
       <div className={styles.search}>
         <label htmlFor="text"></label>
-        <input id="text" type="text" placeholder="Pesquise aqui" />
+        <input ref={inputRef} id="text" type="text" placeholder="Pesquise aqui" onChange={handleOnChange} value={inputValue}/>
       </div>
 
       {/* Parte do código que fica o Home, Todas as Categorias, Sobre e Login*/}
