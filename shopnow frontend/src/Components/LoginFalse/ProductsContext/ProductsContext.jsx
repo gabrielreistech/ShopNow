@@ -64,8 +64,15 @@ export const ProductsProvider = ({children}) => {
 
       const produtosNosCarrinhos = produtos.filter(produto => produto.quantidadeNoCarrinho > 0);
 
+      const [produtosFiltradosPorNome, setProdutosFiltradosPorNome] = useState([]);
+
+      const filtrarPorNome = (nome) => {
+         const filtrados = produtos.filter((produto) => produto.nome.toLowerCase().includes(nome.toLowerCase()));
+         setProdutosFiltradosPorNome(filtrados);
+      }
+
       return(
-         <ProductsContext.Provider value={{produtosFiltrados, filtrarPorCategoria, produtosAbaixoDe100Reais, aumentarQuantidade, diminuirQuantidade, produtosNosCarrinhos}}>
+         <ProductsContext.Provider value={{produtos, produtosFiltrados, filtrarPorCategoria, produtosAbaixoDe100Reais, aumentarQuantidade, diminuirQuantidade, produtosNosCarrinhos, produtosFiltradosPorNome, filtrarPorNome}}>
             {children}
          </ProductsContext.Provider>
 

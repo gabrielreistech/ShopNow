@@ -1,0 +1,16 @@
+.display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: rgb(230, 150, 11);
+    height: auto;
+}
+
+.produtoNaoEncontrado{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
