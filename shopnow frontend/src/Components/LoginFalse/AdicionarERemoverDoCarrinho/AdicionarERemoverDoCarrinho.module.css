@@ -1,4 +1,5 @@
 .botoes{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -6,6 +7,7 @@
 }
 
 .botoes button{
+    cursor: pointer;
     margin: 0 0.3rem 0 0;
     width: 5vw;
     height: 4vh;
