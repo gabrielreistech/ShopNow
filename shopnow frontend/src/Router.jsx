@@ -13,6 +13,7 @@ import { ProductsProvider } from "./Components/LoginFalse/ProductsContext/Produc
 import AbaixoDe100 from "./Pages/AbaixoDe100/AbaixoDe100";
 import ProximaVersao from "./Pages/ProximaVersao/ProximaVersao";
 import TodosOsProdutos from "./Pages/TodosOsProdutos/TodosOsProdutos";
+import TelaDoProduto from "./Components/LoginFalse/TelaDoProduto/TelaDoProduto";
 
 const Router = () => {
 
@@ -31,9 +32,10 @@ const Router = () => {
                <Route path="/meiosdepagamentos" element={<MeiosDePagamentos />} />
                <Route path="/produtosabaixode100" element={<AbaixoDe100 />} />
                <Route path="/todososprodutos" element={<TodosOsProdutos />} />
+               <Route path="/produto/:id" element={<TelaDoProduto />} />
 
                <Route path="/eletronicos" element={<Eletronicos />} />
-               <Route path="//modaeacessorios" element={<ModaEAcessorios />} />
+               <Route path="/modaeacessorios" element={<ModaEAcessorios />} />
                <Route path="/casaedecoracao" element={<CasaEDecoracao />} />
                <Route path="/brinquedos" element={<Brinquedos />} />
            </Routes>

@@ -35,7 +35,7 @@ const LoginComponent = () => {
                         />
                     </div>
                     <div className={styles.botao}>
-                        <button>Entrar</button>
+                        <button><Link to="/proximaversao">Entrar</Link></button>
                     </div>
                     <div className={styles.cadastro}>
                         <p>Ainda não tem conta? <Link to="/proximaversao">Cadastre-se</Link></p>

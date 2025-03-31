@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import img from "./carrinho-de-compras-de-design-xadrez.png";
-import { use, useContext, useEffect, useRef, useState } from "react";
+import {useContext, useEffect, useRef, useState } from "react";
 import { CarrinhoDeComprasContext } from "../../../Contexts/CarrinhoDeComprasContext";
 import { ProductsContext } from "../ProductsContext/ProductsContext";
 import ProductsInCarts from "../ProductsInCarts/ProductsInCarts";
@@ -82,7 +82,8 @@ const Header = ({ inputRef }) => {
             </div>
 
             <div className={styles.valorTotalDoCarrinho}>
-              <p>Valor total do carrinho: R${produtosNosCarrinhos.reduce((soma, produto) => soma + (produto.preco * produto.quantidadeNoCarrinho), 0)}</p>
+              <p>Valor total do carrinho: R$<span style={{ textDecoration: "underline" }}>{produtosNosCarrinhos.reduce((soma, produto) => soma + (produto.preco * produto.quantidadeNoCarrinho), 0)}</span></p>
+              <button><Link to="/proximaversao">Comprar agora</Link></button>
             </div>
           </div>
         )}

@@ -1,0 +1,45 @@
+.containerExterno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    width: auto;
+    overflow-x: hidden;
+    background: rgb(237, 154, 13);
+}
+
+.containerInterno{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    align-items: center;
+    width: 30vw;
+    height: 85vh;
+    background-color: rgb(209, 209, 209);
+    object-fit: initial;
+}
+
+.containerInterno img{
+    width: 29.7vw;
+    height: 30vh;
+    object-fit: initial;
+}
+
+.containerInterno p{
+    font-weight: bold;
+    margin: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.naoEncontrado{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    overflow-x: hidden;
+}
