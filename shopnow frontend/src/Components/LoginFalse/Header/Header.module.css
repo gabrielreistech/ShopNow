@@ -171,6 +171,14 @@
     text-align: center;
 }
 
+.column:hover .column ul {
+    display: flex;
+}
+
+.column ul li:hover {
+    background-color: rgb(209, 209, 209);
+}
+
 .category {
     height: 4.5rem;
 }
@@ -180,10 +188,24 @@
     z-index: 999;
 }
 
-.column:hover .column ul {
-    display: flex;
+.list ul li a:hover{
+   color:gray;
+   text-shadow:
+        0.5px 0.5px 0px black,
+        -0.5px -0.5px 0px black,
+        0.5px -0.5px 0px black,
+        -0.5px 0.5px 0px black;
+} 
+
+.category li:hover{
+    color: gray;
+    text-shadow:
+        0.5px 0.5px 0px black,
+        -0.5px -0.5px 0px black,
+        0.5px -0.5px 0px black,
+        -0.5px 0.5px 0px black;
 }
 
-.column ul li:hover {
-    background-color: rgb(209, 209, 209);
+.category li:hover .column ul li a{
+    text-shadow: none;
 }

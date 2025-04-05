@@ -7,10 +7,22 @@
 }
 
 .produtoNaoEncontrado{
+    margin-top: 5rem;
     width: 100vw;
-    height: 20vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     font-size: 3rem;
+}
+
+.produtoNaoEncontrado button{
+    margin-top: 2rem;
+    cursor: pointer;
+    border: none;
+    height: 7vh;
+    width: 8vw;
+    font-size: 2rem;
+    border-radius: 1.5rem;
 }

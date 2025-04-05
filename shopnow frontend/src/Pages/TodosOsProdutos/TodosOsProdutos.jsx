@@ -5,6 +5,7 @@ import MainContent from "../../Components/LoginFalse/MainContent/MainContent";
 import { ProductsContext } from "../../Components/LoginFalse/ProductsContext/ProductsContext";
 import { useContext, useEffect, useRef } from "react";
 import Produtos from "../../Components/LoginFalse/Produtos/Produtos";
+import ConfettiButton from "../../Components/LoginFalse/ConfettiButton/ConfettiButton";
 
 const TodosOsProdutos = ({ nome }) => {
 
@@ -31,7 +32,9 @@ const TodosOsProdutos = ({ nome }) => {
             <div className={styles.display}>
                {produtosFiltradosPorNome.length > 0 ? produtosFiltradosPorNome.map((produto, index) => <Produtos key={index} produto={produto} />) : 
                <div className={styles.produtoNaoEncontrado}>
-                 <p>Produto não encontrado.</p>  
+                 <p>Produto não encontrado.</p>
+                 <p>Mas na próxima versão você vai poder adicionar produtos, Ok?</p> 
+                 <ConfettiButton />
                </div>}
             </div>
          </MainContent>
