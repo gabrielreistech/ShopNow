@@ -6,10 +6,10 @@ import imgCartao from "./cartao-de-credito.png";
 import imgDinheiro from "./dinheiro.png";
 import styles from "./MeiosDePagamentos.module.css";
 
-const MeiosDePagamentos = () =>{
-    return(
-       <div>
-          <Header />
+const MeiosDePagamentos = () => {
+    return (
+        <div>
+            <Header />
             <div className={styles.containerExterno}>
                 <div className={styles.containerInterno}>
                     <div className={styles.title}>
@@ -33,8 +33,8 @@ const MeiosDePagamentos = () =>{
                     </div>
                 </div>
             </div>
-          <Footer />
-       </div>
+            <Footer />
+        </div>
     );
 }
 

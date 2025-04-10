@@ -8,14 +8,14 @@ import MainContent from "../../Components/LoginFalse/MainContent/MainContent";
 
 const CasaEDecoracao = () => {
 
-   const {produtosFiltrados, filtrarPorCategoria} = useContext(ProductsContext);
+  const { produtosFiltrados, filtrarPorCategoria } = useContext(ProductsContext);
 
-   useEffect(() =>{
-      filtrarPorCategoria("Casa e Decoração");
-   })
+  useEffect(() => {
+    filtrarPorCategoria("Casa e Decoração");
+  })
 
-   return (
-      <div>
+  return (
+    <div>
       <Header />
       <MainContent>
         <div className={styles.display}>
@@ -24,7 +24,7 @@ const CasaEDecoracao = () => {
       </MainContent>
       <Footer />
     </div>
-   );
+  );
 }
 
 export default CasaEDecoracao;

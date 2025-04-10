@@ -20,7 +20,7 @@ const TodosOsProdutos = ({ nome }) => {
    }, [produtos, nome])
 
    useEffect(() => {
-      if(inputRef.current){
+      if (inputRef.current) {
          inputRef.current.focus();
       }
    }, [])
@@ -30,12 +30,12 @@ const TodosOsProdutos = ({ nome }) => {
          <Header inputRef={inputRef} />
          <MainContent>
             <div className={styles.display}>
-               {produtosFiltradosPorNome.length > 0 ? produtosFiltradosPorNome.map((produto, index) => <Produtos key={index} produto={produto} />) : 
-               <div className={styles.produtoNaoEncontrado}>
-                 <p>Produto não encontrado.</p>
-                 <p>Mas na próxima versão você vai poder adicionar produtos, Ok?</p> 
-                 <ConfettiButton />
-               </div>}
+               {produtosFiltradosPorNome.length > 0 ? produtosFiltradosPorNome.map((produto, index) => <Produtos key={index} produto={produto} />) :
+                  <div className={styles.produtoNaoEncontrado}>
+                     <p>Produto não encontrado.</p>
+                     <p>Mas na próxima versão você vai poder adicionar produtos, Ok?</p>
+                     <ConfettiButton />
+                  </div>}
             </div>
          </MainContent>
          <Footer />

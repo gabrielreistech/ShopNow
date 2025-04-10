@@ -3,13 +3,13 @@ import CadastroComponent from "../../Components/LoginFalse/CadastroComponent/Cad
 import Footer from "../../Components/LoginFalse/Footer/Footer";
 
 const Cadastro = () => {
-    return(
-      <>
-       <Header />
-          <CadastroComponent /> 
-        <Footer />
-      </>
-    );
+  return (
+    <>
+      <Header />
+      <CadastroComponent />
+      <Footer />
+    </>
+  );
 }
 
 export default Cadastro;
