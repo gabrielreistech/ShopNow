@@ -22,7 +22,6 @@ const Sobre = () => {
 
             <p>Com um atendimento de qualidade e um compromisso com a satisfação, o <span className={styles.span}>ShopNow</span> é a sua melhor escolha para comprar e vender online. Venha fazer parte dessa experiência e descubra tudo o que nossa plataforma pode oferecer para você!</p>
           </div>
-
         </div>
       </MainContent>
       <Footer />
