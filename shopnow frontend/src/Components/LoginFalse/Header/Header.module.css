@@ -89,18 +89,23 @@
     font-weight: bold;
 }
 
-.valorTotalDoCarrinho a{
+.valorTotalDoCarrinho a {
     text-decoration: none;
     outline: none;
     color: black;
 }
 
-.valorTotalDoCarrinho button{
+.valorTotalDoCarrinho button {
     height: 2rem;
     width: 8rem;
     font-size: 1rem;
     font-weight: bold;
     margin: -0.2rem 0 0 0;
+}
+
+.valorTotalDoCarrinhoNumero{
+    text-decoration: underline;
+    font-size: 1.4rem;
 }
 
 .search {
@@ -114,6 +119,13 @@
     border: 0;
     padding: 0.1rem 0rem 0rem 0.8rem;
     font-size: 1.2rem;
+}
+
+.iconeDeMenu {
+    display: none;
+    width: 20%;
+    position: fixed;
+    right: 2px;
 }
 
 .list ul {
@@ -145,59 +157,12 @@
         -1px 1px 0px black;
 }
 
-.column {
-    z-index: 9999;
-    position: absolute;
-    right: 21.9rem;
-    top: 4.66rem;
+.dropDown {
+    position: relative;
+    height: 4.7rem;
 }
 
-.column ul {
-    display: none;
-    flex-direction: column;
-    width: 12vw;
-}
-
-.column ul li {
-    border: 1px solid black;
-    height: 4.5rem;
-    width: 14vw;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    background: rgb(237, 154, 13);
-    font-size: 1.26rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.column:hover .column ul {
-    display: flex;
-}
-
-.column ul li:hover {
-    background-color: rgb(209, 209, 209);
-}
-
-.category {
-    height: 4.5rem;
-}
-
-.category:hover .column ul {
-    display: flex;
-    z-index: 999;
-}
-
-.list ul li a:hover{
-   color:gray;
-   text-shadow:
-        0.5px 0.5px 0px black,
-        -0.5px -0.5px 0px black,
-        0.5px -0.5px 0px black,
-        -0.5px 0.5px 0px black;
-} 
-
-.category li:hover{
+.dropDown:hover{
     color: gray;
     text-shadow:
         0.5px 0.5px 0px black,
@@ -206,6 +171,332 @@
         -0.5px 0.5px 0px black;
 }
 
-.category li:hover .column ul li a{
+.dropDown:hover .column{
     text-shadow: none;
 }
+
+.dropDown:hover .column{
+    display: flex;
+}
+
+.dropDown:hover .column ul{
+    display: flex;
+}
+
+.dropDown .column ul{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 8.4vh;
+    right: -2vw;
+    background: rgb(230, 150, 11);
+}
+
+.dropDown .column li {
+    border-bottom: 1px solid black;
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+}
+
+
+.column ul li:hover {
+    background-color: rgb(209, 209, 209);
+}
+
+.list ul li a:hover {
+    color: gray;
+    text-shadow:
+        0.5px 0.5px 0px black,
+        -0.5px -0.5px 0px black,
+        0.5px -0.5px 0px black,
+        -0.5px 0.5px 0px black;
+}
+
+.category li:hover {
+    color: gray;
+    text-shadow:
+        0.5px 0.5px 0px black,
+        -0.5px -0.5px 0px black,
+        0.5px -0.5px 0px black,
+        -0.5px 0.5px 0px black;
+}
+
+.category li:hover .column ul li a {
+    text-shadow: none;
+}
+
+@media (max-width:1896px) {
+    .carrinhoDeCompras p {
+        height: 1.7rem;
+    }
+}
+
+@media (max-width:1877px) {
+    .search input {
+        width: 45rem;
+    }
+
+    .list ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0rem;
+        right: 5rem;
+        width: 17rem;
+        height: 19rem;
+        background: rgb(230, 150, 11);
+    }
+
+    .list ul li {
+        height: 5rem;
+        border-bottom: 1px solid black;
+    }
+
+    .list ul li a {
+        padding: 2rem;
+    }
+
+    .list .dropDown {
+        padding-left: 0;
+        position: relative;
+        top: 0rem;
+        right: 0rem;
+        width: 17rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .iconeDeMenu {
+        cursor: pointer;
+        display: flex;
+        width: 70px;
+        height: 75px;
+    }
+
+    .iconeDeMenu:hover + .list ul{
+        display: flex;
+    }
+
+    .list:hover ul {
+        display: flex;
+    }
+
+    .dropDown .column {
+        display: none;
+        flex-direction: row;
+        position: relative;
+        top: -7.6rem;
+        right: 68rem;
+    }
+
+    .dropDown .column ul{
+        display: flex;
+        flex-direction: row;
+        height: 0;
+    }
+
+    .dropDown .column ul li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(230, 150, 11);
+        border: 0;
+        margin-left: -1px;
+    }
+
+}
+
+@media (max-width:1723px){
+    .dropDown .column {
+        right: 67.5rem;
+    }
+}
+
+@media (max-width:1616px){
+    .search input{
+       width: 25rem;
+    }
+}
+
+@media (max-width:1575px){
+    .dropDown .column {
+        right: 68rem;
+    }
+}
+
+@media (max-width:1553px){
+    .dropDown .column {
+        right: 67.5rem;
+    }
+}
+
+@media (max-width:1458px){
+    .tituloDoCarrinhoDeCompras{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width:1380px) {
+    .tituloDoCarrinhoDeCompras{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width:1384px){
+    .dropDown .column ul {
+        display: flex;
+        flex-direction: column;
+        left: 50.8rem;
+    }
+}
+
+@media (max-width:1299px){
+    .search input{
+        width: 18rem;
+    }
+    .carrinhoDeCompras img{
+        width: 2rem;
+    }
+}
+
+/*Carrinho de compras para diminuir*/
+@media (max-width:1250px){
+    .produtosNosCarrinhosOnMouseEnter{
+        margin-left: -14rem;
+        width: 40rem;
+    }
+}
+
+@media (max-width:1180px){
+    .list ul{
+        top: 4.5rem;
+        right: 0rem;
+    }
+}
+
+
+@media (max-width:906px){
+    .produtosNosCarrinhosOnMouseEnter{
+        margin-left: 0rem;
+    }
+    .title{
+        display: none;
+    }
+    .search input{
+        margin-left: 6rem;
+    }
+}
+
+@media (max-width:833px){
+    .title{
+        display: none;
+    }
+    .search{
+        margin-left: -1rem;
+    }
+    .search input{
+       width: 18rem;
+    }
+}
+
+
+@media (max-width:770px){
+    .title{
+        display: none;
+    }
+    .search{
+        margin-left: -4rem;
+    }
+    .search input{
+       width: 18rem;
+    }
+}
+
+
+@media (max-width:740px){
+    .title{
+        display: none;
+    }
+    .search input{
+       width: 18rem;
+    }
+}
+
+@media (max-width:698px){
+    .search input{
+        width: 18rem;
+    }
+}
+
+@media (max-width:674px){
+    .search input{
+        width: 18rem;
+    }
+    .search{
+        margin-left: -6rem;
+    }
+}
+
+@media (max-width:616px){
+    .produtosNosCarrinhosOnMouseEnter{
+     width: 100vw;
+    }
+}
+
+@media (max-width:605px){
+    .search input{
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width:583px){
+    .search input{
+        width: 18rem;
+    }
+}
+
+@media (max-width:541px){
+    .dropDown .column {
+        right: 50.8rem;
+        top: -2.5rem;
+    }
+    .tituloDoCarrinhoDeCompras{
+        font-size: 1.4rem;
+    }
+    .valorTotalDoCarrinho{
+        font-size: 1.2rem;
+    }
+    .valorTotalDoCarrinhoNumero{
+        font-size: 1.2rem;
+    }
+    .search input{
+        width: 14rem;
+    }
+}
+
+@media (max-width:425px){
+    .search {
+        display: none;
+    }
+    .list ul{
+        top: 0rem;
+        left: 5rem;
+    }
+}
+
+@media (max-width:478px){
+    .search input{
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width:418px){
+    .iconeDeMenu{
+        left: 12rem;
+    }
+    .list ul{
+        top: 4.6rem;
+    }
+}
+
