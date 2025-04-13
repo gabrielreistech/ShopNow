@@ -1,17 +1,21 @@
-.container{
-    height: 50vh;
+.container {
+    min-height: 50vh;
+    max-height: 150vh;
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
     background: linear-gradient(rgba(125, 81, 4, 0.785), rgb(237, 154, 13));
 }
 
-.sections{
+.sections {
+    display: flex;
     border-radius: 1rem;
 }
 
-.sections a{
+.sections a {
     display: flex;
     text-decoration: none;
     flex-direction: column;
@@ -19,9 +23,9 @@
     border: 1px solid black;
     border-radius: 2rem;
     box-shadow: 0px 0px 5px 0px black,
-                0px 0px 5px 0px  black,
-                0px 0px 5px 0px black,
-                0px 0px 5px 0px black;
+        0px 0px 5px 0px black,
+        0px 0px 5px 0px black,
+        0px 0px 5px 0px black;
     background-color: rgb(209, 209, 209);
     padding: 0.5rem 0 0.5rem 0;
     width: 15vw;
@@ -29,7 +33,7 @@
     cursor: pointer;
 }
 
-.sections a img{
+.sections a img {
     height: 3rem;
 }
 
@@ -40,11 +44,75 @@
     font-weight: bolder;
 }
 
-.sections p a{
+.sections p a {
     text-align: center;
     font-size: 1.4rem;
     padding-block: 1rem;
     font-weight: bolder;
     text-decoration: none;
     color: black;
+}
+
+@media (max-width:1643px) {
+    .sections a {
+        width: 20vw;
+    }
+}
+
+@media (max-width:1232px) {
+    .sections a {
+        width: 22vw;
+    }
+}
+
+@media (max-width:1120px) {
+    .sections {
+        margin-top: 2rem;
+    }
+
+    .sections a {
+        width: 30vw;
+    }
+}
+
+@media (max-width:821px) {
+    .sections a {
+        width: 33vw;
+    }
+}
+
+@media (max-width:747px) {
+    .sections a {
+        width: 38vw;
+    }
+}
+
+@media (max-width:648px) {
+    .sections a {
+        width: 42vw;
+    }
+}
+
+@media (max-width:587px) {
+    .sections a {
+        width: 46vw;
+    }
+}
+
+@media (max-width:535px) {
+    .sections a {
+        width: 47vw;
+    }
+}
+
+@media (max-width:524px) {
+    .sections a {
+        width: 70vw;
+    }
+}
+
+@media (max-width:352px) {
+    .sections a {
+        width: 80vw;
+    }
 }
