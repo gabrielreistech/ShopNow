@@ -24,7 +24,7 @@ const Header = ({ inputRef }) => {
   }
 
   const handleMouseLeave = () => {
-    setMouseEnter(true);
+    setMouseEnter(false);
   }
 
   useEffect(() => {
