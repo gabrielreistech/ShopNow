@@ -7,7 +7,7 @@ const ProductsInCarts = ({ produto }) => {
         <div className={styles.container}>
             <div className={styles.nome}>Nome: {produto.nome}</div>
             <div className={styles.preco}>Preço: R${produto.preco}</div>
-            <div className={styles.quantidadeNoCarrinho}>Quantidade no carrinho: {produto.quantidadeNoCarrinho}</div>
+            <div className={styles.quantidadeNoCarrinho}>Quantidade <br /> no carrinho: {produto.quantidadeNoCarrinho}</div>
             <AdicionarERemoverDoCarrinho produto={produto} />
         </div>
     );

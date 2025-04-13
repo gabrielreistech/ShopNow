@@ -14,3 +14,21 @@
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+@media (max-width:1380px){
+    .botoes button{
+        font-size: 1.1rem;
+        width: 4vw;
+        height: 3vh;
+    }
+}
+
+@media (max-width:523px){
+    .botoes{
+        margin-left: 2rem;
+    }
+
+    .botoes button{
+        padding: 0 1.5rem 0 1rem;
+    }
+}
