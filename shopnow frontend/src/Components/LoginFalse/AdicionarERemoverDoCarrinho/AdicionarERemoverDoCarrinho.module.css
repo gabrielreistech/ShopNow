@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin: 1rem 0 0 0.3rem;
 }
 
 .botoes button{
@@ -25,10 +24,12 @@
 
 @media (max-width:523px){
     .botoes{
-        margin-left: 2rem;
+       flex-direction: column;
+       margin-top: 1.5rem;
     }
 
     .botoes button{
-        padding: 0 1.5rem 0 1rem;
+        width: 15vw;
+        margin-bottom: 0.4rem;
     }
 }

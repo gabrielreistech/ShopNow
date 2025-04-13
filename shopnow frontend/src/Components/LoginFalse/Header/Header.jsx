@@ -59,12 +59,13 @@ const Header = ({ inputRef }) => {
   return (
     //Parte do código onde fica o nome da loja, o SHOPNOW.
     <div className={styles.container}>
-      <div className={styles.title}>
+      <div className={styles.titulo}>
         <h1>
           <Link to="/">SHOPNOW</Link>
         </h1>
       </div>
 
+      {/* Parte do código onde fica o ícone do carrinho de compras e a quantidade no carrinho. */}
       <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles.containerCarrinho}>
         <div className={styles.carrinhoDeCompras}>
           <img src={img} alt="ícone do carrinho de compras." />
@@ -89,6 +90,7 @@ const Header = ({ inputRef }) => {
           </div>
         )}
       </div>
+
       {/* Parte do código onde fica a barra de pesquisa */}
       <div className={styles.search}>
         <label htmlFor="text"></label>
@@ -106,14 +108,14 @@ const Header = ({ inputRef }) => {
             <li className={styles.dropDown}>
               Todas categorias
               <div className={styles.column}>
-              <ul >
-                <li><Link to="/eletronicos">Eletrônicos</Link></li>
-                <li><Link to="/modaeacessorios">Moda e Acessórios</Link></li>
-                <li><Link to="/casaedecoracao">Casa e Decoração</Link></li>
-                <li><Link to="/brinquedos">Brinquedos</Link></li>
-              </ul>
+                <ul >
+                  <li><Link to="/eletronicos">Eletrônicos</Link></li>
+                  <li><Link to="/modaeacessorios">Moda e Acessórios</Link></li>
+                  <li><Link to="/casaedecoracao">Casa e Decoração</Link></li>
+                  <li><Link to="/brinquedos">Brinquedos</Link></li>
+                </ul>
               </div>
-              
+
             </li>
             <li><Link to="/sobre">Sobre</Link></li>
             <li className={styles.login}><Link to="/login">Login</Link></li>
