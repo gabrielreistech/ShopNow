@@ -8,13 +8,17 @@
     z-index: 999;
 }
 
-.title h1 {
+.titulo {
+    width: 20vw;
+}
+
+.titulo h1 {
     cursor: pointer;
     font-size: 2.8rem;
     padding: 0.7rem 0 0 5rem;
 }
 
-.title h1 a {
+.titulo h1 a {
     text-decoration: none;
     color: black;
 }
@@ -22,7 +26,8 @@
 .carrinhoDeCompras {
     cursor: pointer;
     display: flex;
-    width: 10rem;
+    width: 10vw;
+    height: 100%;
     padding: 1rem 0 0 5rem;
 }
 
@@ -67,11 +72,11 @@
 
 .produtosNosCarrinhosOnMouseEnter {
     display: flex;
+    position: absolute;
     flex-direction: column;
     background-color: white;
     border: 2px solid black;
     border-radius: 5px;
-    margin: 1.2rem -41rem 0 -19.5rem;
     min-height: 5vh;
     max-height: 68vh;
     width: 58vw;
@@ -103,17 +108,21 @@
     margin: -0.2rem 0 0 0;
 }
 
-.valorTotalDoCarrinhoNumero{
+.valorTotalDoCarrinhoNumero {
     text-decoration: underline;
     font-size: 1.4rem;
 }
 
 .search {
-    padding: 1.2rem 0rem 0rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 100%;
 }
 
 .search input {
-    width: 31vw;
+    width: 20vw;
     height: 4vh;
     border-radius: 3rem;
     border: 0;
@@ -126,6 +135,10 @@
     width: 20%;
     position: fixed;
     right: 2px;
+}
+
+.list {
+    width: 40vw;
 }
 
 .list ul {
@@ -162,7 +175,7 @@
     height: 4.7rem;
 }
 
-.dropDown:hover{
+.dropDown:hover {
     color: gray;
     text-shadow:
         0.5px 0.5px 0px black,
@@ -171,19 +184,19 @@
         -0.5px 0.5px 0px black;
 }
 
-.dropDown:hover .column{
+.dropDown:hover .column {
     text-shadow: none;
 }
 
-.dropDown:hover .column{
+.dropDown:hover .column {
     display: flex;
 }
 
-.dropDown:hover .column ul{
+.dropDown:hover .column ul {
     display: flex;
 }
 
-.dropDown .column ul{
+.dropDown .column ul {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -233,8 +246,12 @@
 }
 
 @media (max-width:1877px) {
+    .search {
+        width: 35vw;
+    }
+
     .search input {
-        width: 45rem;
+        width: 28vw;
     }
 
     .list ul {
@@ -274,7 +291,7 @@
         height: 75px;
     }
 
-    .iconeDeMenu:hover + .list ul{
+    .iconeDeMenu:hover+.list ul {
         display: flex;
     }
 
@@ -290,13 +307,13 @@
         right: 68rem;
     }
 
-    .dropDown .column ul{
+    .dropDown .column ul {
         display: flex;
         flex-direction: row;
         height: 0;
     }
 
-    .dropDown .column ul li{
+    .dropDown .column ul li {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -307,43 +324,51 @@
 
 }
 
-@media (max-width:1723px){
+@media (max-width:1723px) {
     .dropDown .column {
         right: 67.5rem;
     }
 }
 
-@media (max-width:1616px){
-    .search input{
-       width: 25rem;
+@media (max-width:1616px) {
+    .search input {
+        width: 25rem;
     }
 }
 
-@media (max-width:1575px){
+@media (max-width:1575px) {
     .dropDown .column {
         right: 68rem;
     }
 }
 
-@media (max-width:1553px){
+@media (max-width:1553px) {
     .dropDown .column {
         right: 67.5rem;
     }
 }
 
-@media (max-width:1458px){
-    .tituloDoCarrinhoDeCompras{
+@media (max-width:1458px) {
+    .tituloDoCarrinhoDeCompras {
         font-size: 1.7rem;
     }
 }
 
 @media (max-width:1380px) {
-    .tituloDoCarrinhoDeCompras{
+    .tituloDoCarrinhoDeCompras {
         font-size: 1.8rem;
     }
 }
 
-@media (max-width:1384px){
+@media (max-width:1384px) {
+    .search {
+        width: 40vw;
+    }
+
+    .search input {
+        width: 20vw;
+    }
+
     .dropDown .column ul {
         display: flex;
         flex-direction: column;
@@ -351,152 +376,181 @@
     }
 }
 
-@media (max-width:1299px){
-    .search input{
-        width: 18rem;
+@media (max-width:1299px) {
+    .search {
+        margin-left: 5rem;
+        width: 35vw;
     }
-    .carrinhoDeCompras img{
+
+    .search input {
+        width: 30vw;
+    }
+
+    .carrinhoDeCompras img {
         width: 2rem;
     }
 }
 
 /*Carrinho de compras para diminuir*/
-@media (max-width:1250px){
-    .produtosNosCarrinhosOnMouseEnter{
-        margin-left: -14rem;
+@media (max-width:1250px) {
+    .search {
+        width: 36vw;
+    }
+
+    .carrinhoDeCompras {
+        width: 12vw;
+        margin-left: 3rem;
+    }
+
+    .produtosNosCarrinhosOnMouseEnter {
         width: 40rem;
     }
 }
 
-@media (max-width:1180px){
-    .list ul{
+@media (max-width:1180px) {
+    .list ul {
         top: 4.5rem;
         right: 0rem;
     }
 }
 
+@media (max-width:1050px){
+    .carrinhoDeCompras{
+        width: 13vw;
+    }
+}
 
-@media (max-width:906px){
-    .produtosNosCarrinhosOnMouseEnter{
+@media (max-width:977px) {
+    .carrinhoDeCompras {
+        width: 15vw;
+        margin-left: 4.5rem;
+    }
+}
+
+
+@media (max-width:906px) {
+    .titulo {
+        display: none;
+    }
+}
+
+@media (max-width:833px) {
+    .carrinhoDeCompras{
+        width: 16vw;
+    }
+    .titulo {
+        display: none;
+    }
+
+    .search {
+        width: 40vw;
+        margin-left: 8rem;
+    }
+
+    .search input {
+        width: 40vw;
+    }
+}
+
+@media (max-width:773px){
+    .carrinhoDeCompras{
+        width: 17vw;
+    }
+}
+
+@media (max-width:700px) {
+    .carrinhoDeCompras {
+        width: 30vw;
         margin-left: 0rem;
     }
-    .title{
-        display: none;
+
+    .search {
+        margin-left: 0;
+        width: 50vw;
     }
-    .search input{
-        margin-left: 6rem;
+
+    .search input {
+        width: 50vw;
     }
 }
 
-@media (max-width:833px){
-    .title{
-        display: none;
-    }
-    .search{
-        margin-left: -1rem;
-    }
-    .search input{
-       width: 18rem;
+@media (max-width:616px) {
+    .produtosNosCarrinhosOnMouseEnter {
+        width: 100vw;
     }
 }
 
-
-@media (max-width:770px){
-    .title{
-        display: none;
-    }
-    .search{
-        margin-left: -4rem;
-    }
-    .search input{
-       width: 18rem;
-    }
-}
-
-
-@media (max-width:740px){
-    .title{
-        display: none;
-    }
-    .search input{
-       width: 18rem;
-    }
-}
-
-@media (max-width:698px){
-    .search input{
-        width: 18rem;
-    }
-}
-
-@media (max-width:674px){
-    .search input{
-        width: 18rem;
-    }
-    .search{
-        margin-left: -6rem;
-    }
-}
-
-@media (max-width:616px){
-    .produtosNosCarrinhosOnMouseEnter{
-     width: 100vw;
-    }
-}
-
-@media (max-width:605px){
-    .search input{
-        margin-left: 4rem;
-    }
-}
-
-@media (max-width:583px){
-    .search input{
-        width: 18rem;
-    }
-}
-
-@media (max-width:541px){
+@media (max-width:541px) {
     .dropDown .column {
         right: 50.8rem;
         top: -2.5rem;
     }
-    .tituloDoCarrinhoDeCompras{
+
+    .tituloDoCarrinhoDeCompras {
         font-size: 1.4rem;
     }
-    .valorTotalDoCarrinho{
+
+    .valorTotalDoCarrinho>p {
         font-size: 1.2rem;
     }
-    .valorTotalDoCarrinhoNumero{
+
+    .valorTotalDoCarrinhoNumero {
         font-size: 1.2rem;
     }
-    .search input{
+
+    .search input {
         width: 14rem;
     }
 }
 
-@media (max-width:425px){
+@media (max-width:490px) {
+    .carrinhoDeCompras {
+        margin-left: -3rem;
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width:465px) {
+    .valorTotalDoCarrinho>p {
+        margin-top: 0.25rem;
+        font-size: 1.1rem;
+    }
+
+    .valorTotalDoCarrinhoNumero {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:444px) {
+    .valorTotalDoCarrinho>p {
+        font-size: 1rem;
+    }
+    .valorTotalDoCarrinhoNumero {
+        font-size: 1rem;
+    }
+    .valorTotalDoCarrinho>button{
+        width: 20vw;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:439px) {
     .search {
         display: none;
     }
-    .list ul{
+
+    .list ul {
         top: 0rem;
         left: 5rem;
     }
 }
 
-@media (max-width:478px){
-    .search input{
-        margin-left: 2rem;
-    }
-}
-
-@media (max-width:418px){
-    .iconeDeMenu{
+@media (max-width:418px) {
+    .iconeDeMenu {
         left: 12rem;
     }
-    .list ul{
+
+    .list ul {
         top: 4.6rem;
     }
 }
-

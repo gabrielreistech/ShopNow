@@ -1,75 +1,93 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
-    gap: 3rem;
     flex-direction: row;
     border-bottom: 2px solid black;
     width: auto;
     height: 12vh;
-    padding-top: 1.5rem;
     background: rgb(200, 132, 15);
     font-size: 1.4rem;
 }
 
-.nome{
-    margin: 1.2rem 0 0 1rem;
+.containerDasVariaveis {
+    background: rgb(200, 132, 15);
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    width: 80vw;
+}
+
+.nome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
 }
 
-.preco{
-    margin: 1.2rem 0 0 0;
+.preco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
 }
 
-.quantidadeNoCarrinho{
-    margin: 0.5rem 0 0 0;
+.quantidadeNoCarrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
 }
 
-@media (max-width:1458px){
-    .container{
+.containerDoBotao {
+    display: flex;
+    width: 20vw;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:1651px) {
+    .containerDasVariaveis {
         font-size: 1.3rem;
     }
 }
 
-@media (max-width:1435px){
-    .container{
-        font-size: 1.3rem;
+@media (max-width:1490px) {
+    .containerDasVariaveis {
+        gap: 3rem;
     }
 }
 
-@media (max-width:1380px){
-    .container{
+@media (max-width:1283px) {
+    .containerDasVariaveis {
         font-size: 1.2rem;
     }
 }
 
-@media (max-width:1250px){
-    .container{
-       gap: 1rem;
-    }
-}
-
-@media (max-width:641px){
-    .nome{
-        margin-left: -3rem;
-    }
-}
-
-@media (max-width:605px){
-    .container{
+@media (max-width:1250px) {
+    .containerDasVariaveis {
+        gap: 1rem;
         font-size: 1.1rem;
     }
 }
 
-@media (max-width:563px){
-    .container{
+@media (max-width:635px) {
+    .container {
+        margin-left: 0;
+    }
+}
+
+@media (max-width:568px) {
+    .containerDasVariaveis {
         font-size: 1rem;
     }
 }
 
-@media (max-width:523px){
-    .nome{
-        margin-left: 0.3rem;
+@media (max-width:523px) {
+    .containerDasVariaveis {
+        flex-direction: column;
+        width: 50vw;
+    }
+    .containerDoBotao{
+        width: 50vw;
     }
 }
