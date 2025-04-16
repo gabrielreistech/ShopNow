@@ -10,10 +10,10 @@ const Sobre = () => {
       <Header />
       <MainContent>
         <div className={styles.container}>
-          <div className={styles.image}>
+          <div className={styles.imagem}>
             <img src={img} alt="Uma mulher fazendo compras." />
           </div>
-          <div className={styles.text}>
+          <div className={styles.texto}>
             <p>O <span className={styles.span}>ShopNow</span> é o lugar perfeito para você que adora comprar e vender produtos de forma rápida e segura. Com uma experiência simples e intuitiva, nossa plataforma conecta vendedores e compradores, oferecendo uma vasta gama de produtos para atender às suas necessidades do dia a dia.</p>
 
             <p>Seja você um comprador em busca de ofertas imperdíveis ou um vendedor querendo expandir seu negócio, o <span className={styles.span}>ShopNow</span> torna o processo fácil, seguro e sem complicação. De eletrônicos a moda, beleza e muito mais, nossa plataforma tem tudo o que você precisa, a qualquer hora e em qualquer lugar.</p>

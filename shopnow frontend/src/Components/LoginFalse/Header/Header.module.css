@@ -1,7 +1,7 @@
 .container {
     display: flex;
     background: rgb(200, 132, 15);
-    height: 8.5vh;
+    height: 10vh;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -9,6 +9,8 @@
 }
 
 .titulo {
+    display: flex;
+    align-items: center;
     width: 20vw;
 }
 
@@ -26,6 +28,7 @@
 .carrinhoDeCompras {
     cursor: pointer;
     display: flex;
+    align-items: center;
     width: 10vw;
     height: 100%;
     padding: 1rem 0 0 5rem;
@@ -80,6 +83,7 @@
     min-height: 5vh;
     max-height: 68vh;
     width: 58vw;
+    margin-top: 2px;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -113,7 +117,7 @@
     font-size: 1.4rem;
 }
 
-.search {
+.pesquisa {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +125,7 @@
     height: 100%;
 }
 
-.search input {
+.pesquisa input {
     width: 20vw;
     height: 4vh;
     border-radius: 3rem;
@@ -137,16 +141,18 @@
     right: 2px;
 }
 
-.list {
+.categorias {
     width: 40vw;
 }
 
-.list ul {
+.categorias ul {
+    height: 10.1vh;
     display: flex;
+    align-items: center;
     flex-direction: row;
 }
 
-.list ul li {
+.categorias ul li {
     cursor: pointer;
     text-decoration: none;
     list-style: none;
@@ -156,12 +162,12 @@
     font-weight: bolder;
 }
 
-.list ul li a {
+.categorias ul li a {
     text-decoration: none;
     color: black;
 }
 
-.list .login a {
+.categorias .login a {
     color: white;
     text-shadow:
         1px 1px 0px black,
@@ -170,12 +176,13 @@
         -1px 1px 0px black;
 }
 
-.dropDown {
-    position: relative;
-    height: 4.7rem;
+.todasCategorias{
+    display: flex;
+    align-items: center;
+    height: 10vh;
 }
 
-.dropDown:hover {
+.todasCategorias:hover {
     color: gray;
     text-shadow:
         0.5px 0.5px 0px black,
@@ -184,40 +191,43 @@
         -0.5px 0.5px 0px black;
 }
 
-.dropDown:hover .column {
+.todasCategorias:hover .coluna {
     text-shadow: none;
 }
 
-.dropDown:hover .column {
+.todasCategorias:hover .coluna {
     display: flex;
 }
 
-.dropDown:hover .column ul {
+.todasCategorias:hover .coluna ul {
     display: flex;
 }
 
-.dropDown .column ul {
+.todasCategorias .coluna ul {
+    border: 1px solid black;
+    height: 39.2vh;
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 8.4vh;
-    right: -2vw;
+    top: 10vh;
+    right: 15.7vw;
     background: rgb(230, 150, 11);
 }
 
-.dropDown .column li {
-    border-bottom: 1px solid black;
+.todasCategorias .coluna li {
+    font-size: 1.2rem;
+    width: 14.5vw;
     text-align: center;
     position: relative;
     padding: 2rem;
 }
 
 
-.column ul li:hover {
+.coluna ul li:hover {
     background-color: rgb(209, 209, 209);
 }
 
-.list ul li a:hover {
+.categorias ul li a:hover {
     color: gray;
     text-shadow:
         0.5px 0.5px 0px black,
@@ -226,18 +236,6 @@
         -0.5px 0.5px 0px black;
 }
 
-.category li:hover {
-    color: gray;
-    text-shadow:
-        0.5px 0.5px 0px black,
-        -0.5px -0.5px 0px black,
-        0.5px -0.5px 0px black,
-        -0.5px 0.5px 0px black;
-}
-
-.category li:hover .column ul li a {
-    text-shadow: none;
-}
 
 @media (max-width:1896px) {
     .carrinhoDeCompras p {
@@ -246,15 +244,15 @@
 }
 
 @media (max-width:1877px) {
-    .search {
+    .pesquisa {
         width: 35vw;
     }
 
-    .search input {
+    .pesquisa input {
         width: 28vw;
     }
 
-    .list ul {
+    .categorias ul {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -265,16 +263,16 @@
         background: rgb(230, 150, 11);
     }
 
-    .list ul li {
+    .categorias ul li {
         height: 5rem;
         border-bottom: 1px solid black;
     }
 
-    .list ul li a {
+    .categorias ul li a {
         padding: 2rem;
     }
 
-    .list .dropDown {
+    .categorias .todasCategorias {
         padding-left: 0;
         position: relative;
         top: 0rem;
@@ -307,13 +305,13 @@
         right: 68rem;
     }
 
-    .dropDown .column ul {
+    .todasCategorias .coluna ul {
         display: flex;
         flex-direction: row;
         height: 0;
     }
 
-    .dropDown .column ul li {
+    .todasCategorias .coluna ul li {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -325,25 +323,25 @@
 }
 
 @media (max-width:1723px) {
-    .dropDown .column {
+    .todasCategorias .coluna {
         right: 67.5rem;
     }
 }
 
 @media (max-width:1616px) {
-    .search input {
+    .pesquisa input {
         width: 25rem;
     }
 }
 
 @media (max-width:1575px) {
-    .dropDown .column {
+    .todasCategorias .coluna {
         right: 68rem;
     }
 }
 
 @media (max-width:1553px) {
-    .dropDown .column {
+    .todasCategorias .coluna {
         right: 67.5rem;
     }
 }
@@ -361,15 +359,15 @@
 }
 
 @media (max-width:1384px) {
-    .search {
+    .pesquisa {
         width: 40vw;
     }
 
-    .search input {
+    .pesquisa input {
         width: 20vw;
     }
 
-    .dropDown .column ul {
+    .todasCategorias .coluna ul {
         display: flex;
         flex-direction: column;
         left: 50.8rem;
@@ -377,12 +375,13 @@
 }
 
 @media (max-width:1299px) {
-    .search {
+    
+    .pesquisa {
         margin-left: 5rem;
         width: 35vw;
     }
 
-    .search input {
+    .pesquisa input {
         width: 30vw;
     }
 
@@ -393,7 +392,7 @@
 
 /*Carrinho de compras para diminuir*/
 @media (max-width:1250px) {
-    .search {
+    .pesquisa {
         width: 36vw;
     }
 
@@ -408,7 +407,7 @@
 }
 
 @media (max-width:1180px) {
-    .list ul {
+    .categorias ul {
         top: 4.5rem;
         right: 0rem;
     }
@@ -442,12 +441,12 @@
         display: none;
     }
 
-    .search {
+    .pesquisa {
         width: 40vw;
-        margin-left: 8rem;
+        margin-left: 4rem;
     }
 
-    .search input {
+    .pesquisa input {
         width: 40vw;
     }
 }
@@ -464,12 +463,12 @@
         margin-left: 0rem;
     }
 
-    .search {
+    .pesquisa {
         margin-left: 0;
         width: 50vw;
     }
 
-    .search input {
+    .pesquisa input {
         width: 50vw;
     }
 }
@@ -481,7 +480,7 @@
 }
 
 @media (max-width:541px) {
-    .dropDown .column {
+    .todasCategorias .coluna {
         right: 50.8rem;
         top: -2.5rem;
     }
@@ -498,7 +497,7 @@
         font-size: 1.2rem;
     }
 
-    .search input {
+    .pesquisa input {
         width: 14rem;
     }
 }
@@ -535,11 +534,11 @@
 }
 
 @media (max-width:439px) {
-    .search {
+    .pesquisa {
         display: none;
     }
 
-    .list ul {
+    .todasCategorias ul {
         top: 0rem;
         left: 5rem;
     }
@@ -550,7 +549,7 @@
         left: 12rem;
     }
 
-    .list ul {
+    .todasCategorias ul {
         top: 4.6rem;
     }
 }

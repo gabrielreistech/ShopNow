@@ -15,14 +15,14 @@ const Eletronicos = () => {
   })
 
   return (
-    <div>
+    <div className={styles.eletronicosPage}>
       <Header />
       <MainContent>
         <div className={styles.display}>
           {produtosFiltrados.map((produto, index) => <Produtos key={index} produto={produto} />)}
         </div>
       </MainContent>
-      <Footer />
+        <Footer category={true}/>
     </div>
   );
 }

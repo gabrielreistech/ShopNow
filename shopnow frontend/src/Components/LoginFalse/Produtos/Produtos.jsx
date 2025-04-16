@@ -10,7 +10,7 @@ const Produtos = ({ produto }) => {
                     <div className={styles.nomeDoProduto}>
                         <p>{produto.nome}</p>
                     </div>
-                    <div>
+                    <div className={styles.containerImg}>
                         <img src={produto.imagem} alt="Foto do produto" />
                     </div>
                     <div className={styles.preco}>
@@ -18,11 +18,11 @@ const Produtos = ({ produto }) => {
                     </div>
 
                     <div className={styles.funcao}>
-                        <p className={styles.funcaoP}>Quantidade no Carrinho: </p>
-                        <p>{produto.quantidadeNoCarrinho}</p>
+                        <p className={styles.funcaoParagrafo}>Quantidade no Carrinho: </p>
+                        <p className={styles.funcaoQuantidade}>{produto.quantidadeNoCarrinho}</p>
                     </div>
                 </Link>
-                <AdicionarERemoverDoCarrinho produto={produto} />
+                <AdicionarERemoverDoCarrinho produto={produto} category={true} />
             </div>
         </div>
     );
