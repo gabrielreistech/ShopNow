@@ -92,7 +92,7 @@ const Header = ({ inputRef }) => {
       </div>
 
       {/* Parte do código onde fica a barra de pesquisa */}
-      <div className={styles.search}>
+      <div className={styles.pesquisa}>
         <label htmlFor="text"></label>
         <input ref={inputRef} id="text" type="text" placeholder="Pesquise aqui" onChange={handleOnChange} value={inputValue} />
       </div>
@@ -101,13 +101,13 @@ const Header = ({ inputRef }) => {
 
       <div className={styles.containerList}>
         <img className={styles.iconeDeMenu} src={menu} alt="ícone de menu" />
-        <div className={styles.list}>
+        <div className={styles.categorias}>
           <ul>
             <li><Link to="/">Home</Link></li>
 
-            <li className={styles.dropDown}>
+            <li className={styles.todasCategorias}>
               Todas categorias
-              <div className={styles.column}>
+              <div className={styles.coluna}>
                 <ul >
                   <li><Link to="/eletronicos">Eletrônicos</Link></li>
                   <li><Link to="/modaeacessorios">Moda e Acessórios</Link></li>

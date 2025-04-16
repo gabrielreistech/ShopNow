@@ -1,11 +1,11 @@
-.botoes{
+.botoes {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-.botoes button{
+.botoes button {
     cursor: pointer;
     margin: 0 0.3rem 0 0;
     width: 5vw;
@@ -14,22 +14,52 @@
     font-size: 1.2rem;
 }
 
-@media (max-width:1380px){
-    .botoes button{
+.botoesCategory {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.botoesCategory button {
+    cursor: pointer;
+    margin: 0 0.3rem 0 0;
+    width: 5vw;
+    height: 4vh;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@media (max-width:1380px) {
+    .botoes button {
         font-size: 1.1rem;
         width: 4vw;
         height: 3vh;
     }
 }
 
-@media (max-width:523px){
-    .botoes{
-       flex-direction: column;
-       margin-top: 1.5rem;
+@media (max-width:523px) {
+    .botoes {
+        flex-direction: column;
+        margin-top: 1.5rem;
     }
 
-    .botoes button{
+    .botoes button {
         width: 15vw;
         margin-bottom: 0.4rem;
+    }
+}
+
+/* Para todos botões de todas categorias*/
+
+@media (max-width:729px) {
+    .botoesCategory button {
+        width: 10vw;
+    }
+}
+
+@media (max-width:522px) {
+    .botoesCategory button {
+        width: 20vw;
     }
 }
