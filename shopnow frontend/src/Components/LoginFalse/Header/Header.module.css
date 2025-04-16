@@ -543,13 +543,3 @@
         left: 5rem;
     }
 }
-
-@media (max-width:418px) {
-    .iconeDeMenu {
-        left: 12rem;
-    }
-
-    .todasCategorias ul {
-        top: 4.6rem;
-    }
-}

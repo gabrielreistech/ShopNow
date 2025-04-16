@@ -22,7 +22,7 @@ const Eletronicos = () => {
           {produtosFiltrados.map((produto, index) => <Produtos key={index} produto={produto} />)}
         </div>
       </MainContent>
-        <Footer category={true}/>
+        <Footer />
     </div>
   );
 }

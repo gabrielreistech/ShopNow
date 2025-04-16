@@ -49,11 +49,11 @@ const TelaDoProduto = () => {
                             <p>{produtoFiltradoPorId.descricao}</p>
                         </div>
                         <div>
-                            <hr />
+                            <hr className={styles.hr} />
                             <p>Quantidade de produtos no carrinho: {produtoFiltradoPorId.quantidadeNoCarrinho}</p>
                         </div>
                         <div>
-                        <AdicionarERemoverDoCarrinho produto={produtoFiltradoPorId} />
+                        <AdicionarERemoverDoCarrinho produto={produtoFiltradoPorId} botoesPageProduto={true} />
                         </div>
                     </div>
                 </div>)

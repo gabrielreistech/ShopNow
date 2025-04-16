@@ -19,7 +19,7 @@
    margin-top: 5.5rem;
 }
 
-.title{
+.titulo{
     width: 25vw;
     text-align: center;
     border-bottom: 3px solid black;
@@ -31,7 +31,8 @@
     display: flex;
     padding: 1rem;
     margin: 1rem;
-    width: 20vw;;
+    width: 20vw;
+    margin: 1rem;
 }
 
 .cards p{
@@ -46,4 +47,125 @@
     margin-left: 5rem;
     width: 4vw;
     height: 8vh;
+}
+
+@media (max-width:1977px){
+    .containerInterno{
+        width: 30vw;
+    }
+    .titulo{
+        width: 30vw;
+    }
+}
+
+@media (max-width:1660px){
+    .containerInterno{
+        width: 40vw;
+    }
+    .titulo{
+        width: 40vw;
+    }
+    .cards img{
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width:1400px){
+    .containerInterno{
+        width: 50vw;
+    }
+    .titulo{
+        width: 50vw;
+    }
+    .cards{
+        width: 25vw;
+    }
+    .cards img{
+        margin-left: 3.5rem;
+        width: 5rem;
+    }
+}
+
+@media (max-width:1200px){
+    .containerInterno{
+        width: 50vw;
+    }
+    .titulo{
+        width: 50vw;
+    }
+    .cards img{
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width:1000px){
+    .containerInterno{
+        width: 60vw;
+    }
+    .titulo{
+        width: 60vw;
+    }
+    .cards img{
+        margin-left: 0rem;
+    }
+}
+
+@media (max-width:800px){
+    .containerInterno{
+        width: 70vw;
+    }
+    .titulo{
+        width: 70vw;
+    }
+    .cards img{
+        margin-left: -1.5rem;
+    }
+}
+
+@media (max-width:680px){
+    .containerInterno{
+        width: 80vw;
+    }
+    .titulo{
+        width: 80vw;
+    }
+    .cards img{
+        margin-left: -2rem;
+    }
+}
+
+@media (max-width:500px){
+    .containerInterno{
+        width: 90vw;
+    }
+    .titulo{
+        width: 90vw;
+        font-size: 1.1rem;
+    }
+    .cards img{
+        margin-left: -3rem;
+    }
+}
+
+@media (max-width:430px){
+    .containerInterno{
+        width: 95vw;
+    }
+    .titulo{
+        width: 95vw;
+        font-size: 1rem;
+    }
+    .cards img{
+        margin-left: -3.3rem;
+    }
+}
+
+@media (max-width:388px){
+    .cards p{
+        font-size: 1.3rem;
+    }
+    .cards img{
+        height: 6vh;
+        width: 13vw;
+    }
 }

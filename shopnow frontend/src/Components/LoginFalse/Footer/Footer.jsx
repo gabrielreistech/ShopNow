@@ -1,9 +1,9 @@
 import styles from "./Footer.module.css"
 
-const Footer = ({category}) => {
+const Footer = () => {
     return(
-      <div className={category ? styles.footerCategory : styles.container}>
-        <div className={styles.text}>
+      <div className={styles.container}>
+        <div className={styles.texto}>
         <h2>Uma frase aleatória, apenas pra preencher o espaço do rodapé.</h2>
         </div>
       </div>

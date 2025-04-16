@@ -14,14 +14,31 @@
     font-size: 1.2rem;
 }
 
-.botoesCategory {
+.botoesCategoria {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-.botoesCategory button {
+.botoesCategoria button {
+    cursor: pointer;
+    margin: 0 0.3rem 0 0;
+    width: 5vw;
+    height: 4vh;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.botoesPageProduto {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.botoesPageProduto button {
     cursor: pointer;
     margin: 0 0.3rem 0 0;
     width: 5vw;
@@ -39,7 +56,7 @@
 }
 
 @media (max-width:523px) {
-    .botoes {
+    .botoes button {
         flex-direction: column;
         margin-top: 1.5rem;
     }
@@ -50,16 +67,61 @@
     }
 }
 
-/* Para todos botões de todas categorias*/
+/* Para todos botões de todas categorias */
 
 @media (max-width:729px) {
-    .botoesCategory button {
+    .botoesCategoria button {
         width: 10vw;
     }
 }
 
 @media (max-width:522px) {
-    .botoesCategory button {
+    .botoesCategoria button {
         width: 20vw;
+    }
+}
+
+/* Para botão da tela do produto */
+
+@media (max-width:1629px) {
+    .botoesPageProduto button {
+        width: 10vw;
+    }
+}
+
+@media (max-width:1380px) {
+    .botoesPageProduto button {
+        height: 4.5vh;
+    }
+}
+
+@media (max-width:1060px) {
+    .botoesPageProduto button {
+        width: 12vw;
+    }
+}
+
+@media (max-width:725px) {
+    .botoesPageProduto button {
+        width: 16vw;
+    }
+}
+
+@media (max-width:540px) {
+    .botoesPageProduto button {
+        width: 20vw;
+    }
+}
+
+@media (max-width:425px) {
+    .botoesPageProduto button {
+        width: 30vw;
+    }
+}
+
+@media (max-width:345px) {
+    .botoesPageProduto button {
+        margin: 0;
+        margin-right: 0.5rem;
     }
 }

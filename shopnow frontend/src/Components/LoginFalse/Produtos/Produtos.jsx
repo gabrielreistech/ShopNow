@@ -22,7 +22,7 @@ const Produtos = ({ produto }) => {
                         <p className={styles.funcaoQuantidade}>{produto.quantidadeNoCarrinho}</p>
                     </div>
                 </Link>
-                <AdicionarERemoverDoCarrinho produto={produto} category={true} />
+                <AdicionarERemoverDoCarrinho produto={produto} categoria={true} />
             </div>
         </div>
     );
