@@ -1,4 +1,4 @@
-import { createContext, useState} from "react";
+import { createContext, useState, useMemo} from "react";
 import computador from "../../../assets/eletronicosFotos/fotoDeComputador.jpeg";
 import televisao from "../../../assets/eletronicosFotos/tv32.jpeg";
 import radio from "../../../assets/eletronicosFotos/radio.jpeg";
