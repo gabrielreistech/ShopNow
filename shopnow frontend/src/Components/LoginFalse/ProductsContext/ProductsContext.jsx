@@ -69,7 +69,7 @@ export const ProductsProvider = ({children}) => {
         setCategoriaSelecionada(categoria);
       };
 
-      const produtosFiltrados = categoriaSelecionada ? produtos.filter(produto => produto.categoria === categoriaSelecionada) : produtos;
+      const produtosFiltrados = useMemo(() => categoriaSelecionada ? produtos.filter(produto => produto.categoria === categoriaSelecionada) : produtos, [categoriaSelecionada, produtos]);
 
       const produtosAbaixoDe100Reais = produtos.filter(produto => produto.preco <= 100);
 
