@@ -7,23 +7,32 @@
     text-align: center;
 } 
 
-.footerCategory{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-    height: 8vh;
-    text-align: center;
-}
-
-@media (max-width:643px){
-    .text>h2{
+@media (max-width:658px){
+    .texto>h2{
         font-size: 1.2rem;
     }
 }
 
 @media (max-width:532px){
-    .text>h2{
+    .texto>h2{
         font-size: 1.0rem;
+    }
+}
+
+@media (max-width:428px){
+    .texto>h2{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:385px){
+    .texto>h2{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:343px){
+    .texto>h2{
+        font-size: 0.7rem;
     }
 }

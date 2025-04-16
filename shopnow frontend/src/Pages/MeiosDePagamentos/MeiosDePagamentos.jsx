@@ -12,7 +12,7 @@ const MeiosDePagamentos = () => {
             <Header />
             <div className={styles.containerExterno}>
                 <div className={styles.containerInterno}>
-                    <div className={styles.title}>
+                    <div className={styles.titulo}>
                         <h1>Meios de Pagamentos</h1>
                     </div>
                     <div className={styles.cards}>
