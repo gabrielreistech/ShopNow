@@ -29,7 +29,7 @@ const TodosOsProdutos = ({ nome }) => {
       <div>
          <Header inputRef={inputRef} />
          <MainContent>
-            <div className={styles.display}>
+            <div className={styles.container}>
                {produtosFiltradosPorNome.length > 0 ? produtosFiltradosPorNome.map((produto, index) => <Produtos key={index} produto={produto} />) :
                   <div className={styles.produtoNaoEncontrado}>
                      <p>Produto não encontrado.</p>

@@ -4,7 +4,6 @@ import styles from "./Produtos.module.css";
 
 const Produtos = ({ produto }) => {
     return (
-        <div className={styles.container}>
             <div className={styles.containerInterno}>
                 <Link to={`/produto/${produto.id}`}>
                     <div className={styles.nomeDoProduto}>
@@ -23,8 +22,7 @@ const Produtos = ({ produto }) => {
                     </div>
                 </Link>
                 <AdicionarERemoverDoCarrinho produto={produto} categoria={true} />
-            </div>
-        </div>
+            </div>  
     );
 }
 

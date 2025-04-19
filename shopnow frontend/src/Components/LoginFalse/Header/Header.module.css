@@ -29,13 +29,13 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    width: 10vw;
+    width: 10rem;
     height: 100%;
     padding: 1rem 0 0 5rem;
 }
 
 .carrinhoDeCompras img {
-    width: 2vw;
+    width: 2rem;
     height: 4.4vh;
 }
 
@@ -54,7 +54,7 @@
     padding: 5px;
     border-bottom: 2px solid black;
     text-align: center;
-    font-size: 2rem;
+    font-size: clamp(1rem, 2.2vw, 2rem);
     padding: 1rem;
     font-weight: bold;
 }
@@ -82,7 +82,7 @@
     border-radius: 5px;
     min-height: 5vh;
     max-height: 68vh;
-    width: 58vw;
+    width: 70vw;
     margin-top: 2px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -93,7 +93,7 @@
     display: flex;
     justify-content: center;
     gap: 50px;
-    font-size: 1.4rem;
+    font-size: clamp(0.9rem, 2.2vw, 1.4rem);
     padding: 1rem;
     font-weight: bold;
 }
@@ -114,7 +114,7 @@
 
 .valorTotalDoCarrinhoNumero {
     text-decoration: underline;
-    font-size: 1.4rem;
+    font-size: clamp(0.9rem, 2.2vw, 1.4rem);
 }
 
 .pesquisa {
@@ -136,29 +136,28 @@
 
 .iconeDeMenu {
     display: none;
-    width: 20%;
+    width: 5rem;
     position: fixed;
-    right: 2px;
-}
-
-.categorias {
-    width: 40vw;
+    right: 0;
 }
 
 .categorias ul {
     height: 10.1vh;
+    width: 45vw;
     display: flex;
     align-items: center;
     flex-direction: row;
 }
 
 .categorias ul li {
+    text-align: center;
+    width: 11.2vw;
     cursor: pointer;
     text-decoration: none;
     list-style: none;
     text-transform: uppercase;
     font-size: 1.26rem;
-    padding: 1.5rem 0 0 5rem;
+    padding: 1.5rem 0 1.5rem 0rem;
     font-weight: bolder;
 }
 
@@ -176,10 +175,13 @@
         -1px 1px 0px black;
 }
 
-.todasCategorias{
+.categorias .todasCategorias {
+    width: 15.5vw;
+    position: relative;
     display: flex;
     align-items: center;
-    height: 10vh;
+    justify-content: center;
+    height: 10.1vh;
 }
 
 .todasCategorias:hover {
@@ -193,6 +195,7 @@
 
 .todasCategorias:hover .coluna {
     text-shadow: none;
+    width: 40vw;
 }
 
 .todasCategorias:hover .coluna {
@@ -203,25 +206,31 @@
     display: flex;
 }
 
+.todasCategorias .coluna{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+
 .todasCategorias .coluna ul {
     border: 1px solid black;
-    height: 39.2vh;
-    display: none;
+    height: 44vh;
+    width: auto;
+    display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 10vh;
-    right: 15.7vw;
     background: rgb(230, 150, 11);
 }
 
 .todasCategorias .coluna li {
+    box-sizing: border-box;
     font-size: 1.2rem;
-    width: 14.5vw;
+    width: 14.1vw;
     text-align: center;
     position: relative;
     padding: 2rem;
+    height: 11vh;
 }
-
 
 .coluna ul li:hover {
     background-color: rgb(209, 209, 209);
@@ -236,310 +245,185 @@
         -0.5px 0.5px 0px black;
 }
 
-
-@media (max-width:1896px) {
-    .carrinhoDeCompras p {
-        height: 1.7rem;
-    }
-}
-
-@media (max-width:1877px) {
-    .pesquisa {
-        width: 35vw;
-    }
-
-    .pesquisa input {
-        width: 28vw;
-    }
-
-    .categorias ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 0rem;
-        right: 5rem;
-        width: 17rem;
-        height: 19rem;
-        background: rgb(230, 150, 11);
-    }
-
-    .categorias ul li {
-        height: 5rem;
-        border-bottom: 1px solid black;
-    }
-
-    .categorias ul li a {
-        padding: 2rem;
-    }
-
-    .categorias .todasCategorias {
-        padding-left: 0;
-        position: relative;
-        top: 0rem;
-        right: 0rem;
-        width: 17rem;
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
-    .iconeDeMenu {
-        cursor: pointer;
-        display: flex;
-        width: 70px;
-        height: 75px;
-    }
-
-    .iconeDeMenu:hover+.list ul {
-        display: flex;
-    }
-
-    .list:hover ul {
-        display: flex;
-    }
-
-    .dropDown .column {
-        display: none;
-        flex-direction: row;
-        position: relative;
-        top: -7.6rem;
-        right: 68rem;
-    }
-
-    .todasCategorias .coluna ul {
-        display: flex;
-        flex-direction: row;
-        height: 0;
-    }
-
-    .todasCategorias .coluna ul li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgb(230, 150, 11);
-        border: 0;
-        margin-left: -1px;
-    }
-
-}
-
-@media (max-width:1723px) {
-    .todasCategorias .coluna {
-        right: 67.5rem;
-    }
-}
-
-@media (max-width:1616px) {
-    .pesquisa input {
-        width: 25rem;
-    }
-}
-
-@media (max-width:1575px) {
-    .todasCategorias .coluna {
-        right: 68rem;
-    }
-}
-
-@media (max-width:1553px) {
-    .todasCategorias .coluna {
-        right: 67.5rem;
-    }
-}
-
-@media (max-width:1458px) {
-    .tituloDoCarrinhoDeCompras {
-        font-size: 1.7rem;
-    }
-}
-
-@media (max-width:1380px) {
-    .tituloDoCarrinhoDeCompras {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width:1384px) {
-    .pesquisa {
-        width: 40vw;
-    }
-
-    .pesquisa input {
+@media (min-width:2560px){
+    .titulo{
+        margin-left: 40rem;
         width: 20vw;
     }
-
-    .todasCategorias .coluna ul {
-        display: flex;
-        flex-direction: column;
-        left: 50.8rem;
-    }
-}
-
-@media (max-width:1299px) {
-    
-    .pesquisa {
-        margin-left: 5rem;
+    .categorias{
+        margin-left: -10rem;
         width: 35vw;
     }
-
-    .pesquisa input {
-        width: 30vw;
-    }
-
-    .carrinhoDeCompras img {
-        width: 2rem;
+    .categorias ul{
+        justify-content: center;
     }
 }
 
-/*Carrinho de compras para diminuir*/
-@media (max-width:1250px) {
-    .pesquisa {
-        width: 36vw;
-    }
-
-    .carrinhoDeCompras {
-        width: 12vw;
-        margin-left: 3rem;
-    }
-
-    .produtosNosCarrinhosOnMouseEnter {
-        width: 40rem;
-    }
-}
-
-@media (max-width:1180px) {
-    .categorias ul {
-        top: 4.5rem;
-        right: 0rem;
-    }
-}
-
-@media (max-width:1050px){
-    .carrinhoDeCompras{
-        width: 13vw;
-    }
-}
-
-@media (max-width:977px) {
-    .carrinhoDeCompras {
-        width: 15vw;
-        margin-left: 4.5rem;
-    }
-}
-
-
-@media (max-width:906px) {
-    .titulo {
-        display: none;
-    }
-}
-
-@media (max-width:833px) {
-    .carrinhoDeCompras{
-        width: 16vw;
-    }
-    .titulo {
-        display: none;
-    }
-
-    .pesquisa {
-        width: 40vw;
-        margin-left: 4rem;
-    }
-
-    .pesquisa input {
-        width: 40vw;
-    }
-}
-
-@media (max-width:773px){
-    .carrinhoDeCompras{
+@media (max-width:1335px){
+    .categorias .todasCategorias{
+        left: 0;
         width: 17vw;
     }
-}
-
-@media (max-width:700px) {
-    .carrinhoDeCompras {
-        width: 30vw;
-        margin-left: 0rem;
+    .categorias{
+        position: relative;
+        top: 100%;
+        right: 11%;
     }
-
-    .pesquisa {
-        margin-left: 0;
-        width: 50vw;
-    }
-
-    .pesquisa input {
-        width: 50vw;
-    }
-}
-
-@media (max-width:616px) {
-    .produtosNosCarrinhosOnMouseEnter {
-        width: 100vw;
-    }
-}
-
-@media (max-width:541px) {
-    .todasCategorias .coluna {
-        right: 50.8rem;
-        top: -2.5rem;
-    }
-
-    .tituloDoCarrinhoDeCompras {
-        font-size: 1.4rem;
-    }
-
-    .valorTotalDoCarrinho>p {
-        font-size: 1.2rem;
-    }
-
-    .valorTotalDoCarrinhoNumero {
-        font-size: 1.2rem;
-    }
-
-    .pesquisa input {
-        width: 14rem;
-    }
-}
-
-@media (max-width:490px) {
-    .carrinhoDeCompras {
-        margin-left: -3rem;
-        margin-right: 2rem;
-    }
-}
-
-@media (max-width:465px) {
-    .valorTotalDoCarrinho>p {
-        margin-top: 0.25rem;
-        font-size: 1.1rem;
-    }
-
-    .valorTotalDoCarrinhoNumero {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width:444px) {
-    .valorTotalDoCarrinho>p {
-        font-size: 1rem;
-    }
-    .valorTotalDoCarrinhoNumero {
-        font-size: 1rem;
-    }
-    .valorTotalDoCarrinho>button{
+    .categorias ul{
+        display: none; 
+        flex-direction: column;
         width: 20vw;
+        height: 37vh;
+        background: rgb(200, 132, 15);
+        border: 1px solid black;
+    }
+    .categorias ul li {
+        width: 17vw;
+    }
+    .categorias ul li a:hover{
+        box-sizing: none;
+        text-shadow: none;
+        color: black;
+    }
+    .iconeDeMenu{
+        cursor: pointer;
+        display: flex;
+    }
+    .containerList:hover .categorias ul{
+        display: flex;        
+    }
+    .containerList{
+        width: 17vw;
+    }
+    .todasCategorias:hover {
+        color: black;
+        text-shadow:none;
+    }
+    .pesquisa{
+        width: 50vw;
+    }
+    .pesquisa input{
+        width: 40vw;
+    }
+}
+
+@media (max-width:1270px){
+    .categorias ul{
+        position: relative;
+        flex-direction: row;
+        width: 70vw;
+        height: 10vh;
+        right: 298%;
+    }
+}
+
+@media (max-width:1190px){
+    .titulo{
+        justify-content: center;
+    }
+    .titulo h1{
+        margin-bottom: 0.5rem;
+        margin-right: 4rem;
+    }
+    .titulo h1 a{
+        font-size: 2rem;
+    }
+    .pesquisa{
+        width: 30vw;
+        margin-left: 1rem;
+    }
+    .categorias ul{
+        position: relative;
+        flex-direction: row;
+        width: 70vw;
+        height: 10vh;
+        right: 87%;
+    }
+    .containerList{
+        width: 35.2vw;
+    }
+}
+
+@media (max-width:862px){
+    .produtosNosCarrinhosOnMouseEnter{
+        width: 100vw;
+        position: relative;
+        right: 30%;
+    }
+    .valorTotalDoCarrinho button {
         font-size: 0.7rem;
     }
-}
-
-@media (max-width:439px) {
-    .pesquisa {
+    .pesquisa{
         display: none;
     }
+    .titulo{
+        width: 30vw;
+    }
+    .carrinhoDeCompras{
+        width: 10vw;
+        padding: 0.8rem 0 0 0;
+    }
+    .categorias ul{
+        position: relative;
+        flex-direction: row;
+        width: 70vw;
+        height: 10vh;
+        right: 5%;
+    }
+    .containerList{
+        width: 60vw;
+    }
+}
 
-    .todasCategorias ul {
-        top: 0rem;
-        left: 5rem;
+@media (max-width:710px){
+    .carrinhoDeCompras{
+        margin-left: 3rem;
+    }
+    .categorias ul{
+        width: 100vw;
+        right: 66%;
+    }
+    .categorias ul li{
+        width: 25vw;
+    }
+    .categorias .todasCategorias{
+        width: 30vw;
+        height: 10vw;
+    }
+}
+
+@media (max-width:498px){
+    .titulo h1 a{
+        font-size: 2rem;
+        margin-left: 3rem;
+    }
+    .carrinhoDeCompras{
+        margin-left: 4rem;
+    }
+    .categorias ul{
+        right: 77%;
+    }
+    .categorias ul li{
+        font-size: 1rem;
+    }
+    .categorias .todasCategorias{
+        width: 30vw;
+        height: 13vw;
+    }
+}
+
+@media (max-width:389px){
+    .titulo h1 a{
+        font-size: 1.7rem;
+    }
+    .carrinhoDeCompras img{
+        width: 8vw;
+        height: 4vh;
+    }
+    .categorias ul{
+        right: 83%;
+    }
+    .categorias ul li{
+        font-size: 0.8rem;
     }
 }

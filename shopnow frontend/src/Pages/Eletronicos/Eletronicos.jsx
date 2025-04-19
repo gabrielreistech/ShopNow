@@ -18,7 +18,7 @@ const Eletronicos = () => {
     <div className={styles.eletronicosPage}>
       <Header />
       <MainContent>
-        <div className={styles.display}>
+        <div className={styles.container}>
           {produtosFiltrados.map((produto, index) => <Produtos key={index} produto={produto} />)}
         </div>
       </MainContent>
