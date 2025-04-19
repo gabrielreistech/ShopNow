@@ -88,10 +88,7 @@ export const ProductsProvider = ({children}) => {
          const idInt = parseInt(id);
          const filtradoPorId = produtos.find((produto) => produto.id === idInt);
          if(filtradoPorId){
-            console.log("Encontrado");
          setProdutoFiltradoPorId(filtradoPorId);
-         }else{
-            console.log("Não encontrado");
          }
       }
 

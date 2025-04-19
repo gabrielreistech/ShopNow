@@ -115,7 +115,6 @@ const Header = ({ inputRef }) => {
                   <li><Link to="/brinquedos">Brinquedos</Link></li>
                 </ul>
               </div>
-
             </li>
             <li><Link to="/sobre">Sobre</Link></li>
             <li className={styles.login}><Link to="/login">Login</Link></li>

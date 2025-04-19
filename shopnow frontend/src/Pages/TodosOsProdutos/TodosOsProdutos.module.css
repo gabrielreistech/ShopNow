@@ -1,9 +1,10 @@
-.display{
+.container{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     background: rgb(230, 150, 11);
     height: auto;
+    margin: 2rem;   
 }
 
 .produtoNaoEncontrado{
