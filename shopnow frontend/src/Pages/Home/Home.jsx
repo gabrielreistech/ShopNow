@@ -15,9 +15,7 @@ const Home = () => {
           <div className={styles.containerBanner}>
             <Banner />
           </div>
-          <div className={styles.containerSessao}>
-            <Sessao />
-          </div>
+          <Sessao />
         </div>
       </MainContent>
       <Footer />

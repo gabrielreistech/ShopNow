@@ -109,10 +109,10 @@ const Header = ({ inputRef }) => {
               Todas categorias
               <div className={styles.coluna}>
                 <ul >
-                  <li><Link to="/eletronicos">Eletrônicos</Link></li>
-                  <li><Link to="/modaeacessorios">Moda e Acessórios</Link></li>
-                  <li><Link to="/casaedecoracao">Casa e Decoração</Link></li>
-                  <li><Link to="/brinquedos">Brinquedos</Link></li>
+                  <Link to="/eletronicos"><li>Eletrônicos</li></Link>
+                  <Link to="/modaeacessorios"><li>Moda e Acessórios</li></Link>
+                  <Link to="/casaedecoracao"><li>Casa e Decoração</li></Link>
+                  <Link to="/brinquedos"><li>Brinquedos</li></Link>
                 </ul>
               </div>
             </li>

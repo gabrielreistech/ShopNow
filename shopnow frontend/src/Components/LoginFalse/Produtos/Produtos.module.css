@@ -20,7 +20,7 @@
 }
 
 .containerInterno p{
-    font-size: clamp(0.5rem, 2.5vw ,1.2rem);
+    font-size: clamp(1.1rem, 2.5vw ,1.2rem);
     text-align: center;
     font-weight: bold;
     padding-block: 0.7rem;
@@ -41,22 +41,4 @@
 
 .funcaoQuantidade {
     margin-left: 5px;
-}
-
-@media (max-width:1627px){
-    .containerExterno{
-        width: 18vw;
-    }
-}
-
-@media (max-width:1523px){
-    .containerExterno {
-        margin-left: 6.5rem;
-    }
-}
-
-@media (max-width:1406px){
-    .containerExterno {
-        margin-left: 15rem;
-    }
 }

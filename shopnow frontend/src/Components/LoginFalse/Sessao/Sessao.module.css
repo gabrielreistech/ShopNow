@@ -1,16 +1,16 @@
 .container {
-    min-height: 50vh;
-    max-height: 150vh;
+    height: 50vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    background: linear-gradient(rgba(125, 81, 4, 0.785), rgb(237, 154, 13));
+    
 }
 
 .sections {
+    margin: 1.2rem;
     display: flex;
     border-radius: 1rem;
 }
@@ -28,7 +28,7 @@
         0px 0px 5px 0px black;
     background-color: rgb(209, 209, 209);
     padding: 0.5rem 0 0.5rem 0;
-    width: 15vw;
+    width: 20rem;
     color: black;
     cursor: pointer;
 }
@@ -53,66 +53,23 @@
     color: black;
 }
 
-@media (max-width:1643px) {
-    .sections a {
-        width: 20vw;
+@media(max-width:1529px){
+    .container{
+        margin-top: 2.1rem;
+        height: 67vh;
+        justify-content: center;
     }
 }
 
-@media (max-width:1232px) {
-    .sections a {
-        width: 22vw;
+@media (max-width:748px){
+    .container{
+        margin: 0;
+        height: 70rem;
     }
 }
 
-@media (max-width:1120px) {
-    .sections {
-        margin-top: 2rem;
-    }
-
-    .sections a {
-        width: 30vw;
-    }
-}
-
-@media (max-width:821px) {
-    .sections a {
-        width: 33vw;
-    }
-}
-
-@media (max-width:747px) {
-    .sections a {
-        width: 38vw;
-    }
-}
-
-@media (max-width:648px) {
-    .sections a {
-        width: 42vw;
-    }
-}
-
-@media (max-width:587px) {
-    .sections a {
-        width: 46vw;
-    }
-}
-
-@media (max-width:535px) {
-    .sections a {
-        width: 47vw;
-    }
-}
-
-@media (max-width:524px) {
-    .sections a {
-        width: 70vw;
-    }
-}
-
-@media (max-width:352px) {
-    .sections a {
-        width: 80vw;
+@media (max-width:329px){
+    .sections a{
+       width: 17rem;
     }
 }

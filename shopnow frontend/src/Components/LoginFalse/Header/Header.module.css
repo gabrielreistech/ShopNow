@@ -259,6 +259,12 @@
     }
 }
 
+@media (max-width:1465px){
+    .categorias ul li{
+        font-size: 1.14rem;
+    }
+}
+
 @media (max-width:1335px){
     .categorias .todasCategorias{
         left: 0;

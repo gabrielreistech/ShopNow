@@ -6,14 +6,14 @@
     width: auto;
     height: 12vh;
     background: rgb(200, 132, 15);
-    font-size: 1.4rem;
+    font-size: clamp(0.9rem, 1.3vw, 1.4rem);
 }
 
 .containerDasVariaveis {
     background: rgb(200, 132, 15);
     display: flex;
     justify-content: center;
-    gap: 6rem;
+    gap: clamp(2rem, 4vw ,6rem);
     width: 80vw;
 }
 
@@ -45,49 +45,26 @@
     align-items: center;
 }
 
-@media (max-width:1651px) {
-    .containerDasVariaveis {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width:1490px) {
-    .containerDasVariaveis {
-        gap: 3rem;
-    }
-}
-
-@media (max-width:1283px) {
-    .containerDasVariaveis {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width:1250px) {
-    .containerDasVariaveis {
-        gap: 1rem;
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width:635px) {
-    .container {
-        margin-left: 0;
-    }
-}
-
-@media (max-width:568px) {
-    .containerDasVariaveis {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width:523px) {
+@media (max-width:600px) {
     .containerDasVariaveis {
         flex-direction: column;
         width: 50vw;
+        gap: 1rem;
     }
     .containerDoBotao{
         width: 50vw;
+    }
+}
+
+@media (max-width:462px){
+    .containerDasVariaveis {
+        width: 80vw;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:335px){
+    .containerDasVariaveis {
+       width: 100vw;
     }
 }

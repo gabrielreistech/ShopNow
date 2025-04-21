@@ -5,34 +5,5 @@
     background: rgb(200, 132, 15);
     height: 8vh;
     text-align: center;
-} 
-
-@media (max-width:658px){
-    .texto>h2{
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width:532px){
-    .texto>h2{
-        font-size: 1.0rem;
-    }
-}
-
-@media (max-width:428px){
-    .texto>h2{
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width:385px){
-    .texto>h2{
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width:343px){
-    .texto>h2{
-        font-size: 0.7rem;
-    }
+    font-size: clamp(0.49rem, 2vw, 1.2rem);
 }
