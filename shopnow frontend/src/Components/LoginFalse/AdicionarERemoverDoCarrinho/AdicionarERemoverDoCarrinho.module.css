@@ -8,7 +8,7 @@
 .botoes button {
     cursor: pointer;
     margin: 0 0.3rem 0 0;
-    width: 5vw;
+    width: clamp(3rem, 7.4vw, 10rem);
     height: 4vh;
     font-weight: bold;
     font-size: 1.2rem;
@@ -21,11 +21,11 @@
     align-items: flex-start;
 }
 
-.botoesCategoria button {
+.botoesCategoria > button {
     cursor: pointer;
     margin: 0 0.3rem 0 0;
-    width: 5vw;
-    height: 4vh;
+    width: 5rem;
+    height: 2.2rem;
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -38,90 +38,12 @@
     align-items: flex-start;
 }
 
-.botoesPageProduto button {
+.botoesPageProduto > button {
     cursor: pointer;
     margin: 0 0.3rem 0 0;
-    width: 5vw;
+    width: clamp(5rem, 10vw, 10rem);
     height: 4vh;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-@media (max-width:1380px) {
-    .botoes button {
-        font-size: 1.1rem;
-        width: 4vw;
-        height: 3vh;
-    }
-}
-
-@media (max-width:523px) {
-    .botoes button {
-        flex-direction: column;
-        margin-top: 1.5rem;
-    }
-
-    .botoes button {
-        width: 15vw;
-        margin-bottom: 0.4rem;
-    }
-}
-
-/* Para todos botões de todas categorias */
-
-@media (max-width:729px) {
-    .botoesCategoria button {
-        width: 10vw;
-    }
-}
-
-@media (max-width:522px) {
-    .botoesCategoria button {
-        width: 20vw;
-    }
-}
-
-/* Para botão da tela do produto */
-
-@media (max-width:1629px) {
-    .botoesPageProduto button {
-        width: 10vw;
-    }
-}
-
-@media (max-width:1380px) {
-    .botoesPageProduto button {
-        height: 4.5vh;
-    }
-}
-
-@media (max-width:1060px) {
-    .botoesPageProduto button {
-        width: 12vw;
-    }
-}
-
-@media (max-width:725px) {
-    .botoesPageProduto button {
-        width: 16vw;
-    }
-}
-
-@media (max-width:540px) {
-    .botoesPageProduto button {
-        width: 20vw;
-    }
-}
-
-@media (max-width:425px) {
-    .botoesPageProduto button {
-        width: 30vw;
-    }
-}
-
-@media (max-width:345px) {
-    .botoesPageProduto button {
-        margin: 0;
-        margin-right: 0.5rem;
-    }
-}

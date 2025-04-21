@@ -23,7 +23,7 @@ const MeiosDePagamentos = () => {
                         <img src={imgPix} alt="logo do pix" />
                         <p>Pix</p>
                     </div>
-                    <div className={styles.cards}>
+                    <div className={styles.cardsCartao}>
                         <img src={imgCartao} alt="logo de um cartão de crédito ou débito" />
                         <p>Cartão de Crédito/Débito</p>
                     </div>

@@ -9,10 +9,13 @@ const AdicionarERemoverDoCarrinho = ({produto, categoria, botoesPageProduto}) =>
     const { aumentarQuantidade, diminuirQuantidade } = useContext(ProductsContext);
 
     return (
-        <div className={`
-            ${categoria ? styles.botoesCategoria : styles.botoes}
-            ${botoesPageProduto ? styles.botoesPageProduto : styles.botoes}
-          `}>
+        <div className={
+            categoria
+              ? styles.botoesCategoria
+              : botoesPageProduto
+                ? styles.botoesPageProduto
+                : styles.botoes
+          }>
             <button onClick={() => { adicionarItem(); aumentarQuantidade(produto.id) }}>+</button>
             <button onClick={() => { if (produto.quantidadeNoCarrinho !== 0) { removerItem(), diminuirQuantidade(produto.id) } }}>-</button>
         </div>

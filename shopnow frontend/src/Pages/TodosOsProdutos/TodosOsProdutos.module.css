@@ -15,91 +15,21 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-size: 3rem;
+    font-size: clamp(1rem, 3vw, 4rem);
 }
 
 .produtoNaoEncontrado button{
     margin-top: 2rem;
     cursor: pointer;
     border: none;
-    height: 7vh;
-    width: 15.5vw;
-    font-size: 2rem;
-    border-radius: 1.5rem;
+    height: clamp(0rem, 7vh, 3rem);
+    width: clamp(2rem, 10vw, 10rem);
+    font-size: clamp(1rem, 2vw, 2rem);
+    border-radius: 1rem;
 }
 
-@media (max-width:1383px){
+@media (max-width:475px){
     .produtoNaoEncontrado button{
-        width: 15vw;
-    }
-}
-
-@media (max-width:1218px){
-    .produtoNaoEncontrado{
-        font-size: 2.5rem;
-    }
-    .produtoNaoEncontrado button{
-        width: 14vw;
-        font-size: 1.9rem;
-    }
-}
-
-@media (max-width:1088px){
-    .produtoNaoEncontrado{
-        font-size: 2rem;
-    }
-
-    .produtoNaoEncontrado button{
-        width: 14vw;
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width:812px){
-    .produtoNaoEncontrado{
-        font-size: 1.5rem;
-    }
-    .produtoNaoEncontrado button{
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width:609px){
-    .produtoNaoEncontrado{
-        font-size: 1.2rem;
-    }
-    .produtoNaoEncontrado button{
-        height: 5vh;
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width:487px){
-    .produtoNaoEncontrado{
-        font-size: 1rem;
-    }
-    .produtoNaoEncontrado button{
-        height: 4vh;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width:406px){
-    .produtoNaoEncontrado{
-        font-size: 0.9rem;
-    }
-    .produtoNaoEncontrado button{
-        height: 3vh;
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width:365px){
-    .produtoNaoEncontrado{
-        font-size: 0.75rem;
-    }
-    .produtoNaoEncontrado button{
-        height: 2.5vh;
-        font-size: 0.7rem;
+        width: 5rem;
     }
 }

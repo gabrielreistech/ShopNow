@@ -33,7 +33,8 @@ const TodosOsProdutos = ({ nome }) => {
                {produtosFiltradosPorNome.length > 0 ? produtosFiltradosPorNome.map((produto, index) => <Produtos key={index} produto={produto} />) :
                   <div className={styles.produtoNaoEncontrado}>
                      <p>Produto não encontrado.</p>
-                     <p>Mas na próxima versão você vai poder adicionar produtos, Ok?</p>
+                     <p>Mas na próxima versão</p> 
+                     <p>você vai poder adicionar produtos, Ok?</p>
                      <ConfettiButton />
                   </div>}
             </div>
