@@ -6,7 +6,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    
+
 }
 
 .sections {
@@ -53,23 +53,23 @@
     color: black;
 }
 
-@media(max-width:1529px){
-    .container{
+@media(max-width:1529px) {
+    .container {
         margin-top: 2.1rem;
         height: 67vh;
         justify-content: center;
     }
 }
 
-@media (max-width:748px){
-    .container{
+@media (max-width:748px) {
+    .container {
         margin: 0;
         height: 70rem;
     }
 }
 
-@media (max-width:329px){
-    .sections a{
-       width: 17rem;
+@media (max-width:329px) {
+    .sections a {
+        width: 17rem;
     }
 }
