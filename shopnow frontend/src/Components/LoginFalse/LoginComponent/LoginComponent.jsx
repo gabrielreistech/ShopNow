@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 
 const LoginComponent = () => {
 
+    //A implementação dessa parte com validações e etc, será na 2° versão
+
     const { register, handleSubmit, formState: {errors} } = useForm();
 
     const onSubmit = (e) => {

@@ -1,6 +1,5 @@
 import styles from "./TelaDoProduto.module.css";
 import Header from "../Header/Header";
-import MainContent from "../../LoginFalse/MainContent/MainContent";
 import Footer from "../../LoginFalse/Footer/Footer";
 import { useParams } from "react-router-dom";
 import { ProductsContext } from "../ProductsContext/ProductsContext";
@@ -53,12 +52,12 @@ const TelaDoProduto = () => {
                             <p>Quantidade de produtos no carrinho: {produtoFiltradoPorId.quantidadeNoCarrinho}</p>
                         </div>
                         <div>
-                        <AdicionarERemoverDoCarrinho produto={produtoFiltradoPorId} botoesPageProduto={true} />
+                            <AdicionarERemoverDoCarrinho produto={produtoFiltradoPorId} botoesPageProduto={true} />
                         </div>
                     </div>
                 </div>)
                 : (<div className={styles.naoEncontrado}>Produto não encontrado.</div>)}
-                < Footer />
+            < Footer />
         </>
 
     );

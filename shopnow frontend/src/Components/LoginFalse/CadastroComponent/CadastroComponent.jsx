@@ -3,6 +3,8 @@ import {useNavigate } from "react-router-dom";
 
 const CadastroComponent = () => {
 
+    //A implementação dessa parte com validações e etc, será na 2° versão
+
     const navegacao = useNavigate();
 
     const handleBack = (e) => {

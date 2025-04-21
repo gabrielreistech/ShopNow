@@ -8,7 +8,7 @@ const AdicionarERemoverDoCarrinho = ({produto, categoria, botoesPageProduto}) =>
 
     const { aumentarQuantidade, diminuirQuantidade } = useContext(ProductsContext);
 
-    return (
+    return ( //Nesse trecho, o styles vai ser de acordo com a aonde o AdicionarERemoverDoCarrinho estiver, dependendo do local, é um stile diferente.
         <div className={
             categoria
               ? styles.botoesCategoria
