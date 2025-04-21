@@ -167,3 +167,9 @@
         font-size: 0.8rem;
     }
 }
+
+@media (max-width:375px) and (max-height:686px){
+    .texto p{
+       font-size: 0.7rem;       
+    }
+}

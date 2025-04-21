@@ -56,3 +56,17 @@
         margin-top: 2rem;
     }
 }
+
+@media (max-width:375px) and (max-height:686px){
+    .containerInterno{
+        height: 37rem;
+    }
+}
+
+@media (width:344px) and (height:882px){
+    .containerInterno{
+        margin-top: 0;
+        height: 40rem;
+    }
+}
+
