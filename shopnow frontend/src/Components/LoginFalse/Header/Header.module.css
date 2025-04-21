@@ -451,16 +451,7 @@
     }
 }
 
-@media (max-width:375px){
-    .container{
-        height: 5rem;
-    }
-    .carrinhoDeCompras p{
-        padding: 0rem 0.2rem 1.5rem 0.2rem;
-    }
-}
-
-@media (width:500px) and (height:667px){
+@media (max-width:500px) and (max-height:667px){
     .container{
         height: 4.7rem;
     }
@@ -530,3 +521,58 @@
         margin-top: 0;
     }
 }
+
+@media (max-width:375px) and (max-height:686px){
+    .container{
+        height: 5rem;
+    }
+    .carrinhoDeCompras p{
+        padding: 0rem 0.2rem 1.5rem 0.2rem;
+    }
+    .categorias{
+        right: 12%;
+    }
+    .todasCategorias .coluna{
+        top: 120%;
+    }
+    .todasCategorias .coluna ul{
+        right: 130%;
+        height: 16rem;
+    }
+    .todasCategorias .coluna ul li{
+        align-items: center;
+        font-size: 0.55rem;
+        width: 7.5rem;
+        height: 0rem;
+    }
+    .coluna ul li:hover{
+        background-color: none;
+    }
+}
+
+@media (width:344px) and (height:882px){ /*Galaxy*/
+    .carrinhoDeCompras p{
+        padding: 0.1rem 0.2rem 0 0.2rem;
+    }
+    .categorias ul{
+       right: 86.6%;
+    }
+    .todasCategorias .coluna{
+        top: 140%;
+        right: 0%;
+    }
+    .todasCategorias .coluna ul{
+        right: 150%;
+        height: 16rem;
+    }
+    .todasCategorias .coluna ul li{
+        align-items: center;
+        font-size: 0.55rem;
+        width: 7rem;
+        height: 0rem;
+    }
+    .coluna ul li:hover{
+        background-color: none;
+    }
+}
+
