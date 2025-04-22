@@ -550,7 +550,7 @@
     }
 }
 
-@media (width:359px){
+@media (max-width:394px){
     .categorias{
         right: 24.5%;
     }
