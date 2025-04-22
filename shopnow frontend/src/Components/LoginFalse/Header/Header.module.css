@@ -550,6 +550,16 @@
     }
 }
 
+@media (width:359px){
+    .categorias{
+        right: 24.5%;
+    }
+    .todasCategorias .coluna {
+        top: 100%;
+        left: -7%;
+    }
+}
+
 @media (width:344px) and (height:882px){ /*Galaxy*/
     .carrinhoDeCompras p{
         padding: 0.1rem 0.2rem 0 0.2rem;
