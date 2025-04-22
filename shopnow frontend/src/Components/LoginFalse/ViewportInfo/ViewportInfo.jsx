@@ -5,6 +5,7 @@ function ViewportInfo() {
   const [largura, setLargura] = useState(0);
 
   useEffect(() => {
+    //Código para pegar altura e largura do aparelho movel quando precisar para medir a responsividade
     const atualizarTamanhos = () => {
       const h = window.innerHeight;
       const w = window.innerWidth;

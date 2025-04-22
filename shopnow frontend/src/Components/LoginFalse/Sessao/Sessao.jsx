@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styles from "./Sessao.module.css";
-import ViewportInfo from "../../LoginFalse/ViewportInfo/ViewportInfo";
 
 const Sessao = () => {
   return (
@@ -21,8 +20,6 @@ const Sessao = () => {
           <p>Pague suas compras com<br /> rapidez e segurança.</p>
         </Link>
       </div>
-
-      <ViewportInfo />
 
       <div className={styles.sections}>
         <Link to="/produtosabaixode100">
